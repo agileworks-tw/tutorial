@@ -38,7 +38,3 @@ Status: Downloaded newer image for ubuntu:latest
 即從註冊服務器 `registry.hub.docker.com` 取得其中的 ubuntu image。
 
 若有自行架設 docker hub 的需求，就可以透過更改網址的方式來指定下載 image 的位置
-
-若有需要自行架設 private docker hub 可以參考下列網址
-
-[docker/distribution](https://github.com/docker/distribution/blob/master/docs/deploying.md)

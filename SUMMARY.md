@@ -38,6 +38,9 @@ Summary
 
 		-	docker Hub
 
+			-	[distribution private](docker/intro/hub/distribution-private/README.md)
+			-	[distribution public](docker/intro/hub/distribution-public/README.md)
+
 	-	Lesson 3: Docker Machine 的使用 (1 hour)
 
 	-	Lesson 4: 善用 docker hub 上的 image (0.5 hour)
