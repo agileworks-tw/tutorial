@@ -21,25 +21,25 @@ Summary
 
 	-	Lesson 2: 基礎指令 (1 hour - 免費講座提供)
 
-		-	[docker image](docker/basic-command/image/README.md)
+		-	[docker image](docker/basic/image/README.md)
 
-			-	[pull](docker/basic-command/image/pull/README.md)
-			-	[images](docker/basic-command/image/images/README.md)
-			-	[build](docker/basic-command/image/build/README.md)
-			-	[save-load](docker/basic-command/image/save-load/README.md)
-			-	[rmi](docker/basic-command/image/rmi/README.md)
+			-	[pull](docker/basic/image/pull/README.md)
+			-	[images](docker/basic/image/images/README.md)
+			-	[build](docker/basic/image/build/README.md)
+			-	[save-load](docker/basic/image/save-load/README.md)
+			-	[rmi](docker/basic/image/rmi/README.md)
 
 		-	docker container
 
-			-	[run](docker/basic-command/container/run/README.md)
-			-	[stop](docker/basic-command/container/stop/README.md)
-			-	[exec](docker/basic-command/container/exec/README.md)
-			-	[rm](docker/basic-command/container/rm/README.md)
+			-	[run](docker/basic/container/run/README.md)
+			-	[stop](docker/basic/container/stop/README.md)
+			-	[exec](docker/basic/container/exec/README.md)
+			-	[rm](docker/basic/container/rm/README.md)
 
 		-	docker Hub
 
-			-	[distribution private](docker/basic-command/hub/distribution-private/README.md)
-			-	[distribution public](docker/basic-command/hub/distribution-public/README.md)
+			-	[distribution private](docker/basic/hub/distribution-private/README.md)
+			-	[distribution public](docker/basic/hub/distribution-public/README.md)
 
 	-	Lesson 3: Docker Machine 的使用 (1 hour)
 
