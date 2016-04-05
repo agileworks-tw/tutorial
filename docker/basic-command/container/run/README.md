@@ -9,11 +9,12 @@ Container run 有兩種方式
 透過 image 啟動 Container
 -------------------------
 
-### 取得基本的 ubuntu:latest image
+取得基本的 ubuntu:latest image
 
 `docker pull ubuntu:latest`
 
-### run docker image
+run docker image
+----------------
 
 `docker run -d -it ubuntu`
 
@@ -35,6 +36,8 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 8e9ed1a4d9ce        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            fervent_goldstine
 ```
 
+表示 docker 目前正在運行中。
+
 啟動 stopped Container
 ----------------------
 
@@ -48,7 +51,7 @@ docker stop 8e9ed1a4d9ce
 
 `docker start 8e9ed1a4d9ce`
 
-### 重新啟動 docker Container 並且使用 TTY
+### 重新啟動 docker Container 並且進入
 
 再一次停止
 
@@ -57,3 +60,5 @@ docker stop 8e9ed1a4d9ce
 再次啟動 Container 加上 `-i`
 
 `docker start -i 8e9ed1a4d9ce`
+
+一旦需要針對停止中的 Container 進行後續操作時，將可以再次進入 container 進行後續處理。
