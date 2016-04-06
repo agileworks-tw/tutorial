@@ -51,7 +51,11 @@ Summary
 		-	[upgrade](docker/machine/upgrade/README.md)
 		-	[rm](docker/machine/rm/README.md)
 
-	-	Lesson 4: 善用 docker hub 上的 image (0.5 hour)
+	-	[Lesson 4: 善用 docker hub 上的 image (0.5 hour)](docker/hub/README.md)
+
+		-	[ubuntu](docker/hub/ubuntu/README.md)
+		-	[alpine](docker/hub/alpine/README.md)
+		-	[mysql](docker/hub/mysql/README.md)
 
 	-	Lesson 5: 範例專案建置流程說明 (0.5 hour)
 
