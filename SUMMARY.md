@@ -41,7 +41,15 @@ Summary
 			-	[distribution private](docker/basic/hub/distribution-private/README.md)
 			-	[distribution public](docker/basic/hub/distribution-public/README.md)
 
-	-	Lesson 3: Docker Machine 的使用 (1 hour)
+	-	[Lesson 3: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
+
+		-	[drive](docker/machine/drive/README.md)
+		-	[create](docker/machine/create/README.md)
+		-	[env](docker/machine/env/README.md)
+		-	[ls](docker/machine/ls/README.md)
+		-	[使用 docker-machine 連結已存在之遠端 docker engine](docker/machine/exist-remote-docker/README.md)
+		-	[upgrade](docker/machine/upgrade/README.md)
+		-	[rm](docker/machine/rm/README.md)
 
 	-	Lesson 4: 善用 docker hub 上的 image (0.5 hour)
 
