@@ -4,14 +4,15 @@ Summary
 -	Jenkins
 -	[Docker](docker/README.md)
 
-	-	[認識 Docker](docker/000-intro/README.md)
+	-	[Meet Docker](docker/000-intro/README.md)
 
-		-	[什麼是 Docker](docker/000-intro/what/README.md)
+		-	[What is Docker](docker/000-intro/what/README.md)
 		- [Docker vs VMs](docker/000-intro/compare/README.md)
-		-	[使用 Docker 的目地](docker/000-intro/why/README.md)
-		-	[docker image](docker/000-intro/image/README.md)
-		-	[docker container](docker/000-intro/container/README.md)
-		-	[docker Hub](docker/000-intro/hub/README.md)
+		-	[Why Docker](docker/000-intro/why/README.md)
+		-	[Image](docker/000-intro/image/README.md)
+		-	[Container](docker/000-intro/container/README.md)
+		-	[Repository](docker/000-intro/repository/README.md)
+		- [Registry](docker/000-intro/registry/README.md)
 
 	-	Lesson 2: 基礎指令 (1 hour - 免費講座提供)
 

@@ -1,11 +1,6 @@
 Docker Image
 ============
 
-參考
-----
-
--	[《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/introduction/what.html)
-
 Docker 映像檔就是一個唯讀的模板。
 
 例如：一個映像檔可以包含一個完整的 ubuntu 作業系統環境，裡面僅安裝了 Apache 或使用者需要的其它應用程式。

@@ -1,11 +1,6 @@
 Docker 倉庫
 ===========
 
-參考
-----
-
--	[《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/introduction/what.html)
-
 倉庫是集中存放映像檔檔案的場所。有時候會把倉庫和倉庫註冊伺服器（Registry）混為一談，並不嚴格區分。實際上，倉庫註冊伺服器上往往存放著多個倉庫，每個倉庫中又包含了多個映像檔，每個映像檔有不同的標籤（tag）。
 
 倉庫分為公開倉庫（Public）和私有倉庫（Private）兩種形式。

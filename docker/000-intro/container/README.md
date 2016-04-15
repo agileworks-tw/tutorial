@@ -1,11 +1,6 @@
 Docker Container
 ================
 
-參考
-----
-
--	[《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/introduction/what.html)
-
 Docker 利用容器來執行應用。
 
 容器是從映像檔建立的執行實例。它可以被啟動、開始、停止、刪除。每個容器都是相互隔離的、保證安全的平台。
