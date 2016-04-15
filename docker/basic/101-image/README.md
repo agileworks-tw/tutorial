@@ -21,3 +21,5 @@ Lab 101: Docker Image
 2. 取得映像檔<br/>`pull`
 3. 列出所有映像檔<br/>`images`
 4. 檢視映像檔資訊<br/>`inspect`
+5. <br/>`build`
+6. 刪除映像檔<br/>`rmi`
