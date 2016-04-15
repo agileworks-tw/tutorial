@@ -2,22 +2,16 @@ Summary
 =======
 
 -	Jenkins
--	Docker min: 6 max: 9
+-	[Docker](docker/README.md)
 
-	-	環境安裝建置
+	-	[認識 Docker](docker/000-intro/README.md)
 
-		-	AgileWorks
-		-	[Ubuntu](docker/install/ubuntu/README.md)
-		-	[Mac OS X](docker/install/osx/README.md)
-		-	Windows
-
-	-	Lesson 1: 簡介（2 hour）
-
-		-	[什麼是 Docker](docker/intro/what/README.md)
-		-	[使用 Docker 的目地](docker/intro/why/README.md)
-		-	[docker image](docker/intro/image/README.md)
-		-	[docker container](docker/intro/container/README.md)
-		-	[docker Hub](docker/intro/hub/README.md)
+		-	[什麼是 Docker](docker/000-intro/what/README.md)
+		- [Docker vs VMs](docker/000-intro/compare/README.md)
+		-	[使用 Docker 的目地](docker/000-intro/why/README.md)
+		-	[docker image](docker/000-intro/image/README.md)
+		-	[docker container](docker/000-intro/container/README.md)
+		-	[docker Hub](docker/000-intro/hub/README.md)
 
 	-	Lesson 2: 基礎指令 (1 hour - 免費講座提供)
 
@@ -79,3 +73,10 @@ Summary
 	-	Lesson 11: docker network 操作指令 (1 hour)
 
 	-	Lesson 12: docker-swarm 搭配 network (1 hour)
+
+	-	Appendix: 環境安裝建置
+
+		-	AgileWorks
+		-	[Ubuntu](docker/install/ubuntu/README.md)
+		-	[Mac OS X](docker/install/osx/README.md)
+		-	Windows
