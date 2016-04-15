@@ -1,7 +1,12 @@
 alpine
 ======
 
-與 ubuntu 類似，常常作為 base OS 所使用，不一樣的是，此 image 的大小只有 5 mb，作為 docker 之 base image 非常的適合！有越來越多 docker image 使用 alpine 為基底。
+與 ubuntu 類似，常常作為 base OS 所使用，不一樣的是，此 image 的大小只有 5 mb，作為 docker 之 base image 非常的適合！有越來越多 docker image 使用 alpine 為基底，目前有的版本為。
+
+-	3.1 (versions/library-3.1/Dockerfile)
+-	3.2 (versions/library-3.2/Dockerfile)
+-	3.3, latest (versions/library-3.3/Dockerfile)
+-	edge (versions/library-edge/Dockerfile)
 
 與 ubuntu 不一樣的是，安裝軟體時，ubuntu 是透過 `apt-get` 來進行，alpine 則是透過 `apk add` 來進行
 

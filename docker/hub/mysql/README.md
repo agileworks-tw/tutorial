@@ -1,7 +1,13 @@
 mysql
 =====
 
-作為 database，mysql 是很常用的一個 solution，docker 官方就有提供 mysql 的 image
+作為 database，mysql 是很常用的一個 solution，docker 官方就有提供 mysql 的 image，目前提供的版本有：
+
+-	5.5.48, 5.5 (5.5/Dockerfile)
+-	5.6.29, 5.6 (5.6/Dockerfile)
+-	5.7.11, 5.7, 5, latest (5.7/Dockerfile)
+
+若要使用可以參考下列指令：
 
 ```
 docker run -d \
