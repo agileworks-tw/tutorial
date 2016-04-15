@@ -17,4 +17,7 @@ Docker 受到業界大廠的擁戴：
 * RedHat 已經在其 RHEL6.5 中集中支援 Docker。
 * Amazon、Google 及 Microsoft 也在自家 PaaS 產品支援 Docker 服務。
 
+![ecosystem](ecosystem.png)<br/>
+[圖片來源](https://www.linkedin.com/pulse/docker-redefining-cloud-computing-landscape-akash-goswami)
+
   [1]: https://blog.docker.com/2013/06/dotcloud-and-docker-join-the-linux-foundation/ "Linux Foundation"

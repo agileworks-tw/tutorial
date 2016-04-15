@@ -14,15 +14,15 @@ Summary
 		-	[Repository](docker/000-intro/repository/README.md)
 		- [Registry](docker/000-intro/registry/README.md)
 
+	-	[Lab 101: Docker Image](docker/basic/101-image/README.md)
+
+		-	[pull](docker/basic/101-image/pull/README.md)
+		-	[images](docker/basic/101-image/images/README.md)
+		-	[build](docker/basic/101-image/build/README.md)
+		-	[save-load](docker/basic/101-image/save-load/README.md)
+		-	[rmi](docker/basic/101-image/rmi/README.md)
+
 	-	Lesson 2: 基礎指令 (1 hour - 免費講座提供)
-
-		-	[docker image](docker/basic/image/README.md)
-
-			-	[pull](docker/basic/image/pull/README.md)
-			-	[images](docker/basic/image/images/README.md)
-			-	[build](docker/basic/image/build/README.md)
-			-	[save-load](docker/basic/image/save-load/README.md)
-			-	[rmi](docker/basic/image/rmi/README.md)
 
 		-	docker container
 
