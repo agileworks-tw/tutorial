@@ -56,6 +56,8 @@ Summary
 		-	[ubuntu](docker/hub/ubuntu/README.md)
 		-	[alpine](docker/hub/alpine/README.md)
 		-	[mysql](docker/hub/mysql/README.md)
+		-	[maven](docker/hub/maven/README.md)
+		-	[Node.js](docker/hub/nodejs/README.md)
 
 	-	Lesson 5: 範例專案建置流程說明 (0.5 hour)
 
