@@ -5,12 +5,12 @@ Summary
 -	[Meet Docker](docker/000-intro/README.md)
 
 	-	[What is Docker](docker/000-intro/what/README.md)
-	- [Docker vs VMs](docker/000-intro/compare/README.md)
+	-	[Docker vs VMs](docker/000-intro/compare/README.md)
 	-	[Why Docker](docker/000-intro/why/README.md)
 	-	[Image](docker/000-intro/image/README.md)
 	-	[Container](docker/000-intro/container/README.md)
 	-	[Repository](docker/000-intro/repository/README.md)
-	- [Registry](docker/000-intro/registry/README.md)
+	-	[Registry](docker/000-intro/registry/README.md)
 
 -	[Lab 101: Docker Image](docker/basic/101-image/README.md)
 
@@ -56,7 +56,13 @@ Summary
 
 -	Lesson 6: 使用 docker 建置開發環境 (1 hour)
 
+	-	Java
+
+		-	[運行環境](docker/sample-project/java/environment/README.md)
+		-	[範例專案](docker/sample-project/java/project/README.md)
+
 	-	進入 Container 進行建置
+
 	-	透過 Dockerfile 進行建置
 
 -	Lesson 7: 範例專案使用 docker 進行建置 (1 hour)
