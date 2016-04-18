@@ -54,21 +54,19 @@ Summary
 
 -	Lesson 5: 範例專案建置流程說明 (0.5 hour)
 
--	Lesson 6: 使用 docker 建置開發環境 (1 hour)
+-	Lab 301: 使用 docker 建置開發環境 (1 hour)
 
 	-	Java
 
 		-	[運行環境](docker/sample-project/java/environment/README.md)
 		-	[範例專案](docker/sample-project/java/project/README.md)
+		-	[進入 Container 進行建置](docker/sample-project/java/build/README.md)
+		-	[透過 Dockerfile 進行建置](docker/sample-project/java/dockerfile/README.md)
 
 	-	Node.js
 
 		-	[運行環境](docker/sample-project/nodejs/environment/README.md)
 		-	[範例專案](docker/sample-project/nodejs/project/README.md)
-
-	-	進入 Container 進行建置
-
-	-	透過 Dockerfile 進行建置
 
 -	Lesson 7: 範例專案使用 docker 進行建置 (1 hour)
 
