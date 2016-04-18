@@ -1,64 +1,55 @@
-run Container
-=============
+# 執行容器
 
-Container run 有兩種方式
-
-1.	run with image
-2.	start stopped container
-
-透過 image 啟動 Container
--------------------------
-
-取得基本的 ubuntu:latest image
-
-`docker pull ubuntu:latest`
-
-run docker image
-----------------
-
-`docker run -d -it ubuntu`
-
-運行 ubuntu image 後，透過 `-t` 讓 Container 保持運作中
-
-`-d` 是個很重要的 option，表示為 Daemonized 也就是背景執行，如此我們就可以再 Container 運行時，在進行其他操作。
-
-### 檢視運行中 Container 狀況
-
-透過下列指令
-
-`docker ps`
-
-將看到下列輸出內容
+使用 `docker run` 可以啟動一個容器，並執行自訂的 Command Line 指令。
 
 ```
-➜  ~ docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-8e9ed1a4d9ce        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            fervent_goldstine
+docker run ubuntu /bin/echo Hello, Docker!
 ```
 
-表示 docker 目前正在運行中。
-
-啟動 stopped Container
-----------------------
-
-接續上面的結果，透過下面指令將 Container 停止
+執行結果會輸出：
 
 ```
-docker stop 8e9ed1a4d9ce
+Hello, Docker!
 ```
 
-### 重新啟動 docker Container
+實際上 `echo` 指令是在 Ubuntu Linux 作業系統容器中執行。
 
-`docker start 8e9ed1a4d9ce`
+多試試其他 Ubuntu Linux 的指令，例如 `uname`：
 
-### 重新啟動 docker Container 並且進入
+```
+docker run ubuntu /bin/uname -a                                 
+```
 
-再一次停止
+輸出結果：
 
-`docker stop 8e9ed1a4d9ce`
+```
+Linux 5d45430a0a54 4.2.0-27-generic #32~14.04.1-Ubuntu SMP Fri Jan 22 15:32:26 UTC
+2016 x86_64 x86_64 x86_64 GNU/Linux  
+```
 
-再次啟動 Container 加上 `-i`
+Docker Container 提供一個完全隔離的環境給 Ubuntu Linux，有別於傳統的虛擬機器，Docker 的容器十分輕量、隨時可以新建或刪除。
 
-`docker start -i 8e9ed1a4d9ce`
 
-一旦需要針對停止中的 Container 進行後續操作時，將可以再次進入 container 進行後續處理。
+## 執行 Bash Shell
+
+執行：
+
+```
+docker run -it ubuntu:14.04 /bin/bash
+```
+
+在 Container 的 Shell 試試一些常用的 Linux 指令：
+
+* `ls`
+* `ps`
+* `pwd`
+* `dmesg`
+* `uname`
+
+要結束 Shell 只要執行：
+
+```
+exit
+```
+
+退出後可以用 `docker ps -a` 觀察容器的狀態，可以發現每一次 Docker 執行完指令後，都會回到停止狀態。

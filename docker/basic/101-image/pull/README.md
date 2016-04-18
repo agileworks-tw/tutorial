@@ -4,9 +4,11 @@
 
 例如取得最新的 Ubuntu Linux 作業系統映像檔，執行：
 
-`docker pull ubuntu`
+```
+docker pull ubuntu
+```
 
-終端機將會出現下面訊息
+終端機將會出現下面訊息：
 
 ```
 Using default tag: latest
@@ -23,16 +25,19 @@ Status: Downloaded newer image for ubuntu:latest
 實際上這條指令省略了兩個參數內容：
 
 1. Registry（註冊伺服器）
-2. Tag（標記）
+2. Tag（版本標記）
+
+加上 Tag 版本標記，明確指定取得 `ubuntu:14.04`（目前的最新版本）的映像檔。
+
+```
+docker pull ubuntu:14.04
+```
 
 以下指令的執行結果與 `docker pull ubuntu` 相同。
 
 ```
 # 加上 Tag 指定最新版
 docker pull ubuntu:latest
-
-# 加上 Tag 指定版號
-docker pull ubuntu:14.04
 
 # 加上 Registry，指定以 Docker Hub 註冊伺服器作為來源
 docker pull registry.hub.docker.com/ubuntu
@@ -44,4 +49,22 @@ docker pull registry.hub.docker.com/ubuntu:latest
 docker pull dl.dockerpool.com:5000/ubuntu
 ```
 
-若有自行架設 docker hub 的需求，就可以透過更改網址的方式來指定下載 image 的位置
+備註：除了 Docker Hub 或 DockerPool 也可以搭配自行架設的私有註冊伺服器（Registry Server）。
+
+## 更新映像檔
+
+如果使用 `latest` 版本標記取得映像檔，日後可以重新執行 `docker pull` 檢查更新。
+
+例如當 `ubuntu` 發佈更新後執行：
+
+```
+docker pull ubuntu
+```
+
+或
+
+```
+docker pull ubuntu:latest
+```
+
+就可以更新為最新版本。

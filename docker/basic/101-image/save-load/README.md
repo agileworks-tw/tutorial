@@ -1,20 +1,18 @@
-save 及 load image
-==================
+# 備份與載入映像檔
 
-如果因為網路限制需要透過離線的方式安裝 image 時將會需要使用。
 
-首先取出 ubuntu image
+執行 `docker save` 指令將映像檔備份為 `ubuntu-latest.tar`：
 
 ```
-docker pull ubuntu
+docker save -o ubuntu-latest.tar ubuntu:latest
 ```
 
-save docker image
------------------
+如此一來，我們就能將 `ubuntu-latest.tar` 透過 USB 隨身碟等方式複製到其他電腦。
 
-`docker save -o ubuntu_latest.tar ubuntu:latest`
+取得 `ubuntu-latest.tar` 的電腦，即可用 `docker load` 指令載入映像檔。
 
-load docker image
------------------
+```
+docker load --i ubuntu-latest.tar
+```
 
-`docker load --i ubuntu_latest.tar`
+如果遇到需要在沒有網路的環境下離線作業，或是不想透過網路傳輸體積大的映像檔，`docker save` 與 `save load` 提供一個簡單實用的方式。

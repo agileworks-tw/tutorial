@@ -1,11 +1,6 @@
-列出所有的 docker images
-========================
+# 列出映像檔
 
-透過下列指令
-
-`docker images`
-
-可以列出目前已經存的 docker images，執行結果如下
+執行 `docker images` 指令列出本機上已有的映像檔：
 
 ```
 REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
@@ -13,25 +8,14 @@ ubuntu                        latest              a1e4ed2ac65b        8 hours ag
 ubuntu                        14.04               07c86167cdc4        4 weeks ago         188 MB
 ```
 
-其中
+* REPOSITORY
 
-REPOSITORY
-----------
+  代表映像檔所在的倉庫（Repository）名稱。
 
-來自哪個 image
+* TAG
 
-TAG
----
+  版本標記（若是在 `git pull` 時沒有指定版本，就會顯示 `latest` 代表預設的最新版本）。
 
-版本標記，在 pull image 時若沒有給定 tag 預設為 latest
+* IMAGE ID
 
-IMAGE ID
---------
-
-image 的唯一識別編號，可作為運行時唯一識別用如下列指令
-
-`docker run -it 07c86167cdc4 /bin/bash`
-
-也等同於
-
-`docker run -it ubuntu:14.04 /bin/bash`
+  映像檔的唯一識別編號（檔案的 SHA-1 Hash 編碼）。

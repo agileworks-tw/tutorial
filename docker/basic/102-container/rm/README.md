@@ -1,30 +1,40 @@
-remove container
-================
+# 移除容器
 
-首先啟動一 container
-
-`docker run ubuntu`
-
-因為沒有加上任何 option，執行後隨即停止
-
-可以透過
-
-`docker ps -a`
-
-查出所有 Container 包括已停止的，輸出如下
+列出所有容器（包含停止狀態的容器）。
 
 ```
-➜  ~ docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
-270ea7ee8b06        ubuntu              "/bin/bash"         5 seconds ago       Exited (0) 4 seconds ago                       boring_panini
+docker ps -a
 ```
 
-刪除 stopped container
-----------------------
+輸出如下：
 
-`docker rm 270ea7ee8b06`
+```
+CONTAINER ID        IMAGE               COMMAND
+270ea7ee8b06        ubuntu              "/bin/bash"
+```
 
-強制刪除運行中 Container
-------------------------
+如果要移除 `270ea7ee8b06` 這個容器，可以執行 `docker rm ` 指令：
 
-`docker rm -f 270ea7ee8b06`
+```
+docker rm 270
+```
+
+假如容器還在運行中會出現錯誤，加上 `-f` 參數可以強制移除容器。
+
+```
+docker rm -f 270ea7ee8b06
+```
+
+如果同時要移除（或停止）所有容器，可以搭配以下 Shell 指令進行：
+
+先停止所有容器。
+
+```
+docker stop $(docker ps -a -q)
+```
+
+再移除所有容器。
+
+```
+docker rm $(docker ps -a -q)
+```

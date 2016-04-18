@@ -40,18 +40,25 @@ Summary
 
 -	[Lab 101: Docker Image](docker/basic/101-image/README.md)
 
+  - [help](docker/basic/101-image/help/README.md)
 	-	[search](docker/basic/101-image/search/README.md)
 	-	[pull](docker/basic/101-image/pull/README.md)
 	-	[images](docker/basic/101-image/images/README.md)
-	-	[build](docker/basic/101-image/build/README.md)
-	-	[save-load](docker/basic/101-image/save-load/README.md)
+	- [inspect](docker/basic/101-image/inspect/README.md)
+	-	[save, load](docker/basic/101-image/save-load/README.md)
 	-	[rmi](docker/basic/101-image/rmi/README.md)
+
+<!--
+還沒想清楚用 Docker 架設 Jenkins 的實際用處，先閹掉
+- [Lab: 架設 Jenkins Server](docker/basic/101-image/build/README.md)
+-->
 
 -	[Lab 102: Docker Container](docker/basic/102-container/README.md)
 
+	-	[create, start, stop, ps](docker/basic/102-container/create/README.md)
 	-	[run](docker/basic/102-container/run/README.md)
-	-	[stop](docker/basic/102-container/stop/README.md)
-	-	[exec](docker/basic/102-container/exec/README.md)
+	-	[run -d](docker/basic/102-container/daemon/README.md)
+	-	[exec, attach](docker/basic/102-container/exec/README.md)
 	-	[rm](docker/basic/102-container/rm/README.md)
 
 - Lab 103: Data Volumes
@@ -123,3 +130,5 @@ Summary
 	-	[Ubuntu](docker/install/ubuntu/README.md)
 	-	[Mac OS X](docker/install/osx/README.md)
 	-	Windows
+
+- [Appendix: 參考資料](docker/reference/README.md)
