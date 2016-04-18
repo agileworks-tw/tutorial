@@ -75,6 +75,11 @@
   - [進入 Container 進行建置](docker/project/nodejs/env-docker-build/README.md)
   - [透過 Dockerfile 進行建置](docker/project/nodejs/env-dockerfile/README.md)
 
+- Lab 603: 使用 docker 建置 Jenkins 服務 (1 hour)
+
+  - [進入 Container 進行建置](docker/application/jenkins/build-docker/README.md)
+  - [透過 Dockerfile 進行建置](docker/application/jenkins/build-dockerfile/README.md)
+
 - Lab 701: java 範例專案使用 docker 進行建置 (1 hour)
 
   - [範例專案](docker/project/java/repository/README.md)
