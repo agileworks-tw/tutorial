@@ -106,15 +106,17 @@ trunk/java8-maven3            latest              2c9577331819        8 seconds 
 
 透過下面指令確認 docker 之 java 及 maven 版本
 
+`docker run --rm trunk/java8-maven3 java -version`
+
 ```
-➜  ~ docker run --rm trunk/java8-maven3 java -version
 openjdk version "1.8.0_72-internal"
 OpenJDK Runtime Environment (build 1.8.0_72-internal-b15)
 OpenJDK 64-Bit Server VM (build 25.72-b15, mixed mode)
 ```
 
+`docker run --rm trunk/java8-maven3 mvn -v`
+
 ```
-➜  ~ docker run --rm trunk/java8-maven3 mvn -v
 Apache Maven 3.0.5
 Maven home: /usr/share/maven
 Java version: 1.8.0_72-internal, vendor: Oracle Corporation
