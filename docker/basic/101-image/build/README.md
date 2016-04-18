@@ -1,15 +1,13 @@
-docker image 建立
-=================
+# docker image 建立
 
 docker image 的建立，將介紹兩種方式
 
-1.	透過 image 運行為 Container 後透過 bash 進行 image 建立
-2.	透過 Dockerfile 定義進行 image 建立
+1. 透過 image 運行為 Container 後透過 bash 進行 image 建立
+2. 透過 Dockerfile 定義進行 image 建立
 
 兩個範例都將透過安裝 Jenkins Server 來進行。
 
-透過 image 運行為 Container 後進行 image 建立
----------------------------------------------
+## 透過 image 運行為 Container 後進行 image 建立
 
 ### 取得基本的 ubuntu:latest image
 
@@ -78,8 +76,7 @@ su jenkins -c "java -jar /usr/share/jenkins/jenkins.war"
 
 `http://localhost:8000/`
 
-使用 Dockerfile 建立 Docker image
----------------------------------
+## 使用 Dockerfile 建立 Docker image
 
 使用 Dockerfile 時，一旦開始進行建置，Docker 會把 Dockerfile 所在位置底下所有的檔案載入以便建置過程中使用，為了加速建置程序，一般來說一個 Dockerfile 請放置於獨立的資料夾
 
