@@ -54,22 +54,28 @@ Summary
 
 -	Lesson 5: 範例專案建置流程說明 (0.5 hour)
 
--	Lab 301: 使用 docker 建置開發環境 (1 hour)
+-	Lab 601: 使用 docker 建置 java 開發環境 (1 hour)
 
-	-	Java
+	-	[運行環境安裝](docker/project/java/env/README.md)
+	-	[進入 Container 進行建置](docker/project/java/env-docker-build/README.md)
+	-	[透過 Dockerfile 進行建置](docker/project/java/env-dockerfile/README.md)
 
-		-	[運行環境](docker/sample-project/java/environment/README.md)
-		-	[範例專案](docker/sample-project/java/project/README.md)
-		-	[進入 Container 進行建置](docker/sample-project/java/build/README.md)
-		-	[透過 Dockerfile 進行建置](docker/sample-project/java/dockerfile/README.md)
+-	Lab 602: 使用 docker 建置 Node.js 開發環境 (1 hour)
 
-	-	Node.js
+	-	[運行環境安裝](docker/project/nodejs/env/README.md)
+	-	[進入 Container 進行建置](docker/project/nodejs/env-docker-build/README.md)
+	-	[透過 Dockerfile 進行建置](docker/project/nodejs/env-dockerfile/README.md)
 
-		-	[運行環境](docker/sample-project/nodejs/environment/README.md)
-		-	[範例專案](docker/sample-project/nodejs/project/README.md)
+-	Lab 701: java 範例專案使用 docker 進行建置 (1 hour)
 
--	Lesson 7: 範例專案使用 docker 進行建置 (1 hour)
+	-	[範例專案](docker/project/java/repository/README.md)
+	-	測試
+	-	運行
+	-	打包
 
+-	Lab 702: Node.js 範例專案使用 docker 進行建置 (1 hour)
+
+	-	[範例專案](docker/project/nodejs/repository/README.md)
 	-	測試
 	-	運行
 	-	打包
