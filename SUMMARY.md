@@ -1,7 +1,33 @@
 Summary
 =======
 
+<!--
+```
+- Lab 1*: Basic
+  ... docker/basic/101-...
+
+- Lab 2*: OS
+  ... docker/os/201-...
+
+- Lab 3*: Web Server
+  ... docker/web/301-...
+
+- Lab 4*: Database
+  ... docker/db/401-...
+
+- Lab 5*: Application
+  ... docker/app/501-...
+
+- Lab 6*: Development
+... docker/dev/601-...
+
+- Lab 7*: Project
+  ... docker/project/701-...
+```
+-->
+
 -	[Docker](docker/README.md)
+
 -	[Meet Docker](docker/000-intro/README.md)
 
 	-	[What is Docker](docker/000-intro/what/README.md)
@@ -14,25 +40,26 @@ Summary
 
 -	[Lab 101: Docker Image](docker/basic/101-image/README.md)
 
+	-	[search](docker/basic/101-image/search/README.md)
 	-	[pull](docker/basic/101-image/pull/README.md)
 	-	[images](docker/basic/101-image/images/README.md)
 	-	[build](docker/basic/101-image/build/README.md)
 	-	[save-load](docker/basic/101-image/save-load/README.md)
 	-	[rmi](docker/basic/101-image/rmi/README.md)
 
--	Lesson 2: 基礎指令 (1 hour - 免費講座提供)
+-	[Lab 102: Docker Container](docker/basic/102-container/README.md)
 
-	-	docker container
+	-	[run](docker/basic/102-container/run/README.md)
+	-	[stop](docker/basic/102-container/stop/README.md)
+	-	[exec](docker/basic/102-container/exec/README.md)
+	-	[rm](docker/basic/102-container/rm/README.md)
 
-		-	[run](docker/basic/container/run/README.md)
-		-	[stop](docker/basic/container/stop/README.md)
-		-	[exec](docker/basic/container/exec/README.md)
-		-	[rm](docker/basic/container/rm/README.md)
+- Lab 103: Data Volumes
 
-	-	docker Hub
+- [Lab 104: Registry](docker/basic/104-registry/README.md)
 
-		-	[distribution private](docker/basic/hub/distribution-private/README.md)
-		-	[distribution public](docker/basic/hub/distribution-public/README.md)
+	-	[distribution private](docker/basic/104-registry/distribution-private/README.md)
+	-	[distribution public](docker/basic/104-registry/distribution-public/README.md)
 
 -	[Lesson 3: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
 

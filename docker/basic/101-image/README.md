@@ -1,11 +1,11 @@
 Lab 101: Docker Image
 ======================
 
-映像檔（Image）是 Docker 的重要基礎概念。
+映像檔（Image）是 Docker 的重要基礎概念，也是執行容器（Container）所必備。
 
 * 映像檔類似 Ubuntu Live CD / USB 的 ISO。
 
-映像檔與容器（Container）之間的關係？
+映像檔與容器之間的關係？
 
 * 如果把映像檔視為物件導向的類別（class），容器則可視為物件（object）。
 * 啟動容器需要本機已存在所需映像檔。
