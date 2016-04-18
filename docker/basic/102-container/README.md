@@ -12,10 +12,4 @@
 
 本單元將練習以下的 Docker 指令：
 
-1. 建立容器
-
-   `create`, `start`, `stop`, `ps`
-
-2. 啟動容器
-
-   `run`
+`create`, `start`, `stop`, `ps`, `run`, `exec`, `attach`, `rm`
