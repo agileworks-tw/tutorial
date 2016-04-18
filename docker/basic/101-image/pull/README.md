@@ -1,25 +1,14 @@
-docker image 操作
-=================
+# 取得映像檔
 
-一開始使用 docker 時，可以從 docker hub 取得已經存在的 docker image，可以透過
+使用 `docker pull` 指令從 Docker Hub 下載映像檔。
 
-`docker pull`
-
-來進行。
-
-我們可以從最常用的 ubuntu 作為此章節的練習
-
-pull ubuntu
------------
-
-執行下面指令
+例如取得最新的 Ubuntu Linux 作業系統映像檔，執行：
 
 `docker pull ubuntu`
 
 終端機將會出現下面訊息
 
 ```
-➜  ~ docker pull ubuntu
 Using default tag: latest
 latest: Pulling from library/ubuntu
 
@@ -31,10 +20,28 @@ Digest: sha256:4bc45eecd925cb8806294d0e8bc5c1cfd1149c6dd8a5ef2165b6c02eabb8821f
 Status: Downloaded newer image for ubuntu:latest
 ```
 
-該命令實際上相當於
+實際上這條指令省略了兩個參數內容：
 
-`docker pull registry.hub.docker.com/ubuntu`
+1. Registry（註冊伺服器）
+2. Tag（標記）
 
-即從註冊服務器 `registry.hub.docker.com` 取得其中的 ubuntu image。
+以下指令的執行結果與 `docker pull ubuntu` 相同。
+
+```
+# 加上 Tag 指定最新版
+docker pull ubuntu:latest
+
+# 加上 Tag 指定版號
+docker pull ubuntu:14.04
+
+# 加上 Registry，指定以 Docker Hub 註冊伺服器作為來源
+docker pull registry.hub.docker.com/ubuntu
+
+# 同時指定 Registry 與 Tag
+docker pull registry.hub.docker.com/ubuntu:latest
+
+# 指定以 DockerPool 註冊伺服器作為來源
+docker pull dl.dockerpool.com:5000/ubuntu
+```
 
 若有自行架設 docker hub 的需求，就可以透過更改網址的方式來指定下載 image 的位置
