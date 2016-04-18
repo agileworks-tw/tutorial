@@ -95,7 +95,13 @@
   - 運行
   - 打包
 
-- Lesson 8: 範例專案使用 docker-compose 進行建置 (1 hour)
+- Lab 703: java 範例專案使用 docker-compose 進行建置 (1 hour)
+
+  - [範例專案](docker/project/java/repository/README.md)
+  - [安裝](docker/project/java/mvn-install-compose/README.md)
+  - [測試](docker/project/java/mvn-test-compose/README.md)
+  - [運行](docker/project/java/mvn-run-compose/README.md)
+  - [打包](docker/project/java/mvn-package-compose/README.md)
 
 - Lesson 9: 範例專案進行 production image 製作 (0.5 hour)
 
