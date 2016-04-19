@@ -66,3 +66,59 @@ mvn install
 最後使用 `maven:3-jdk-8` image 則為官方提供的 maven 環境。
 
 `mvn install` 則為此次建置要使用的 command 將此專案所需的套件進行安裝。
+
+## 透過 docker compose 運行
+
+### 將 docker command 轉換為 docker-compose
+
+以下面的指令為例
+
+```
+docker run \
+--name sample-java-data \
+-v /root/.m2 \
+ubuntu
+```
+
+```
+docker run --rm \
+-v `pwd`:/app \
+--volumes-from sample-java-data \
+-w /app \
+maven:3-jdk-8 \
+mvn install
+```
+
+轉換為 docker-compose.yml 其檔案內容如下：
+
+```
+data:
+  image: ubuntu
+  volumes:
+    - /root/.m2
+
+install:
+  image: maven:3-jdk-8
+  volumes:
+    - ./:/app
+  volumes_from:
+    - data
+  working_dir: /app
+  command: "mvn install"
+```
+
+### 透過 docker-compose 運行專案安裝
+
+`docker-compose run install`
+
+`volumes_from` 允許格式如下
+
+```
+volumes_from:
+ - service_name
+ - service_name:ro
+ - container:container_name
+ - container:container_name:rw
+```
+
+因為 `volumes_from` 的定義當我們運行 `install` 的 service 時，docker-compose 會連帶的將 `data` service 一併帶起
