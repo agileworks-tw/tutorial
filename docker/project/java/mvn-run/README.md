@@ -42,8 +42,8 @@ docker run --rm \
 -v `pwd`:/app \
 --volumes-from sample-java-data \
 -w /app \
-maven:3-jdk-8 \
 -p 8000:8000 \
+maven:3-jdk-8 \
 mvn spring-boot:run
 ```
 

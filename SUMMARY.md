@@ -97,7 +97,7 @@
   - [運行](docker/project/java/compose-mvn-run/README.md)
   - [打包](docker/project/java/compose-mvn-package/README.md)
 
-- Lesson 9: 範例專案進行 production image 製作 (0.5 hour)
+- [Lab 704: java 範例專案進行 production image 製作 (0.5 hour)](docker/project/java/production-image-build/README.md)
 
 - Lesson 10: docker-swarm 基礎範例 (0.5 hour)
 
