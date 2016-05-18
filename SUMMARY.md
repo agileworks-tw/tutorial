@@ -91,6 +91,7 @@
 
 - Lab 703: java 範例專案使用 docker-compose 進行建置 (1 hour)
 
+  - [練習：製作 dev mode service](docker/pratice/compose-dev-mode.md)
   - [範例專案](docker/project/java/repository/README.md)
   - [安裝](docker/project/java/compose-mvn-install/README.md)
   - [測試](docker/project/java/compose-mvn-test/README.md)

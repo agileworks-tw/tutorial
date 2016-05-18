@@ -22,5 +22,11 @@ ubuntu                     Ubuntu is a Debian-based Linux operating s...   3675 
 ubuntu-upstart             Upstart is an event-based replacement for ...   61        [OK]                      
 torusware/speedus-ubuntu   Always updated official Ubuntu docker imag...   25                   [OK]           
 ubuntu-debootstrap         debootstrap --variant=minbase --components...   24        [OK]                      
-rastasheep/ubuntu-sshd     Dockerized SSH service, built on top of of...   24                   [OK]     
+rastasheep/ubuntu-sshd     Dockerized SSH service, built on top of of...   24                   [OK]
+```
+
+若要讓 search 敘述完整呈現可加上面下面的 Option：
+
+```
+--no-trunc         Don't truncate output
 ```
