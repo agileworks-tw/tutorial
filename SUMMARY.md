@@ -115,6 +115,8 @@
 
 - [Appendix: 參考資料](docker/reference/README.md)
 
+- [Appendix: 相關練習解答](docker/pratice/answer.md)
+
 - Appendix: 疑難排解
 
   - [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
