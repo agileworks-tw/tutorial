@@ -14,10 +14,3 @@
 4. 透過 docker push 將建立好的 docker 發佈到 docker hub
 
 請將上述步驟相關指令完成並且正確執行。
-
-```
-docker login -e test@gmail.com -p testpass -u testuser
-docker-compose run package
-docker build -t smlsunxie/sample_prod .
-docker push smlsunxie/sample_prod
-```

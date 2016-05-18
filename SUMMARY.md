@@ -98,7 +98,12 @@
   - [運行](docker/project/java/compose-mvn-run/README.md)
   - [打包](docker/project/java/compose-mvn-package/README.md)
 
-- [Lab 704: java 範例專案進行 production image 製作 (0.5 hour)](docker/project/java/production-image-build/README.md)
+- Lab 704: java 範例專案進行 production 並且搭配 jenkins (1 hour)
+
+  - [production image 製作](docker/project/java/production-image-build/README.md)
+  - [練習：docker production 發布流程](docker/pratice/production-image-publish.md)
+  - [練習：使用 production image 運行專案](docker/pratice/production-image-run.md)
+  - [練習：搭配 jenkins 建立 production deploy task](docker/pratice/jenkins-docker-prod-deploy-task.md)
 
 - Lesson 10: docker-swarm 基礎範例 (0.5 hour)
 

@@ -28,3 +28,34 @@ docker-compose run package
 docker build -t smlsunxie/sample_prod .
 docker push smlsunxie/sample_prod
 ```
+
+## 使用 production image 運行專案進行 preview
+
+```
+docker stop preview
+docker rm preview
+docker run -d -p 8000:8000 --name preview smlsunxie/sample_prod
+```
+
+## jenkins 建立 production deploy task
+
+### task shell script
+
+```
+docker login -e test@gmail.com -p testpass -u testuser
+docker-compose run package
+docker build -t smlsunxie/sample_prod .
+docker push smlsunxie/sample_prod
+```
+
+### 透過 ssh 連線到 production 機器運行建置好的 image
+
+```
+ssh jenkins@localhost ' \
+
+  docker stop prod && \
+  docker rm prod && \
+  docker run -d -p 8800:8800 --restart always --name prod smlsunxie/sample_prod \
+
+'
+```
