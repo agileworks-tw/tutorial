@@ -1,5 +1,8 @@
 # Summary
 
+- [上課須知](prepare.md)
+- [使用 AgileWorks 平台](AgileWorks.md)
+
 - [Docker](docker/README.md)
 
 - [Meet Docker](docker/000-intro/README.md)
