@@ -29,11 +29,13 @@
 
   ![下載必要的 VirtualBox 安裝檔案](img/download-virtualbox.png)
 
+VirtualBox 主程式下載安裝完成後，安裝擴充包之步驟可以參考[此網誌](http://www.arthurtoday.com/2011/01/oracle-vm-virtualbox-40-extension-pack_14.html)
+
 ### 磁碟空間
 
 請確定 VirtualBox 之【預設機器資料夾】所在的磁碟上，仍有足夠空間，以容納各虛擬機內容及預載之 Docker 映像檔。
 
-建議至少要預留 20 GB： ![預留 VirtualBox 虛擬機所需空間](img/vbox-diskspace.png)
+建議至少要預留 20 GB的空間給 VM 避免磁碟空間不足。
 
 ## 2\. 註冊 GitHub 帳號
 
