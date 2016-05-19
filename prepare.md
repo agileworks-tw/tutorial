@@ -37,15 +37,15 @@ VirtualBox 主程式下載安裝完成後，安裝擴充包之步驟可以參考
 
 建議至少要預留 20 GB的空間給 VM 避免磁碟空間不足。
 
+### 疑難排解
+
+- [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
+
 ## 2\. 註冊 GitHub 帳號
 
 本課程會帶你實機操作，課程中將會需要下載範例專案，以及進行 GitHub 與 Docker Hub 串接運用。
 
 如果你還沒有 GitHub 帳號，請到 [github 官方網站](https://github.com/)進行註冊。
-
-### 疑難排解
-
-- [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
 
 ## 3\. 註冊 Docker Hub 帳號
 
