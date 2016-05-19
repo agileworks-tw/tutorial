@@ -1,6 +1,11 @@
 # Summary
 
-- [上課須知](prepare.md)
+- 上課須知
+
+  - [相關服務事前註冊](prepare/service-signup.md)
+  - [事前安裝：自備筆電](prepare/laptop.md)
+  - [事前安裝：電腦教室](prepare/pc.md)
+
 - [使用 AgileWorks 平台](AgileWorks.md)
 
 - [Docker](docker/README.md)

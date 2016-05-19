@@ -1,16 +1,11 @@
-# 持續整合與自動化測試：課前準備
+# 持續整合與自動化測試：自備筆電課前準備
 
 本課程以實機操作實作練習為主，為維持課程品質及確保學習進度，我們假設您已經熟悉：
 
 1. Linux 基本操作指令
 2. Git 版本控制工具基本操作指令
 
-並且已經完成註冊：
-
-1. GitHub 個人帳號
-2. Docker Hub 個人帳號
-
-如果您自備個人的筆記型電腦，也請先完成以下軟體安裝：
+請先完成以下軟體安裝：
 
 1. Google Chrome 瀏覽器
 2. VirtualBox 5.x 以上版本虛擬機器軟體及 Extension Pack
@@ -35,7 +30,7 @@
 
 VirtualBox 下載頁面 https://www.virtualbox.org/wiki/Downloads
 
-![下載必要的 VirtualBox 安裝檔案](img/download-virtualbox.png)
+![下載必要的 VirtualBox 安裝檔案](download-virtualbox.png)
 
 安裝 VirtualBox Extension Pack 之步驟可以參考[這份文件](http://www.arthurtoday.com/2011/01/oracle-vm-virtualbox-40-extension-pack_14.html)。
 
