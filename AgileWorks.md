@@ -1,1 +1,1 @@
-# 行前準備：註冊並登入 AgileWorks 平台
+# 使用 AgileWorks 平台及下載上課用 VM 映像檔

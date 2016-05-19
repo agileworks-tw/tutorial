@@ -8,11 +8,11 @@
 
 3. 註冊 Docker Hub 帳號
 
-4. [註冊並登入 AgileWorks 平台](config.md)
+4. [使用 AgileWorks 平台及下載上課用 VM 映像檔](AgileWorks.md)
 
 ## 1\. 安裝軟體
 
-本課程的「實機操作」部分，可以自備 **64 位元**的筆記型電腦。而這些筆電的作業系統，可能是 Windows，也可能是 Mac OS X，或各種 Linux distributions，或者使用上課教室的電腦，建議 VM 至少分配 2 GB 記憶體，Host 整體記憶體至少 4 GB。
+本課程的「實機操作」部分，可以自備 **64 位元**的筆記型電腦。而這些筆電的作業系統，可能是 Windows，也可能是 Mac OS X，或各種 Linux distributions，或者使用上課教室的電腦，VM 將需要分配 2 GB 記憶體，因此 Host 整體記憶體至少 4 GB。
 
 為了讓課程有個一致的實作環境，減少操作上的環境變因，我們統一使用 [VirtualBox](https://www.virtualbox.org/) 虛擬機器組合，作為課堂實作的統一環境。
 
@@ -37,12 +37,14 @@
 
 ## 2\. 註冊 GitHub 帳號
 
-本課程會帶你實機操作，將欲「Docker 化」的程式碼置於 [GitHub](https://github.com/) 上，以供後續 Docker Hub 串接運用。
+本課程會帶你實機操作，課程中將會需要下載範例專案，以及進行 GitHub 與 Docker Hub 串接運用。
 
-如果你還沒有 GitHub 帳號，請到[這裡](https://github.com/)註冊。
+如果你還沒有 GitHub 帳號，請到 [github 官方網站](https://github.com/)進行註冊。
+
+### 疑難排解
+
+- [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
 
 ## 3\. 註冊 Docker Hub 帳號
 
-本課程會帶你實機操作，如何利用 Docker 官方的 [Docker Hub](https://registry.hub.docker.com/) 服務，串接置於 GitHub 的程式碼，自動建置 Docker image。
-
-如果你還沒有 Docker Hub 帳號，請到[這裡](https://hub.docker.com/account/signup/)註冊。
+如果你還沒有 Docker Hub 帳號，請到 [Docker Hub 網站](https://hub.docker.com/account/signup/) 進行註冊。
