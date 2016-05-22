@@ -113,6 +113,8 @@
   - [練習：使用 production image 運行專案](docker/pratice/production-image-run.md)
   - [練習：搭配 jenkins 建立 production deploy task](docker/pratice/jenkins-docker-prod-deploy-task.md)
 
+- [Lab 801: java jenkins 2.0 Pipeline 使用 Docker 進行專案建置 (1 hour)](docker/jnekins2/pipeline/build/README.md)
+
 - Lesson 10: docker-swarm 基礎範例 (0.5 hour)
 
 - Lesson 11: docker network 操作指令 (1 hour)
