@@ -43,6 +43,14 @@
   - [distribution private](docker/basic/103-registry/distribution-private/README.md)
   - [distribution public](docker/basic/103-registry/distribution-public/README.md)
 
+- [Lab 201: Docker volume](docker/basic/201-volume/README.md)
+
+  - [create, inspect](docker/basic/201-volume/create/README.md)
+  - [direct volume host filesystem](docker/basic/201-volume/direct/README.md)
+  - [volume form container](docker/basic/201-volume/volume_from/README.md)
+
+- [Lab 202: Docker network](docker/basic/202-network/README.md)
+
 - [Lesson 3: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
 
   - [drive](docker/machine/drive/README.md)
@@ -67,11 +75,12 @@
   - [進入 Container 進行建置](docker/project/java/env-docker-build/README.md)
   - [透過 Dockerfile 進行建置](docker/project/java/env-dockerfile/README.md)
 
-- Lab 603: 使用 docker 建置 Jenkins 服務 (1 hour)
+- Lab 602: 使用 docker 建置 Jenkins 服務 (1 hour)
 
   - [進入 Container 進行建置](docker/application/jenkins/build-docker/README.md)
   - [透過 Dockerfile 進行建置](docker/application/jenkins/build-dockerfile/README.md)
 
+- Lab 603: docker 之間溝通透過 depends_on(1 hour)
 - Lab 701: java 範例專案使用 docker 進行建置 (1 hour)
 
   - [範例專案](docker/project/java/repository/README.md)
