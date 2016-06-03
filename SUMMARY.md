@@ -20,6 +20,8 @@
   - [Repository](docker/000-intro/repository/README.md)
   - [Registry](docker/000-intro/registry/README.md)
 
+- [command reference](docker/basic/command_ref/README.md)
+
 - [Lab 101: Docker Image](docker/basic/101-image/README.md)
 
   - [help](docker/basic/101-image/help/README.md)
@@ -38,10 +40,14 @@
   - [exec, attach](docker/basic/102-container/exec/README.md)
   - [rm](docker/basic/102-container/rm/README.md)
 
-- [Lab 104: Registry](docker/basic/103-registry/README.md)
+- [Lab 103: Registry](docker/basic/103-registry/README.md)
 
   - [distribution private](docker/basic/103-registry/distribution-private/README.md)
   - [distribution public](docker/basic/103-registry/distribution-public/README.md)
+
+- Lab 104: dockerfile
+
+  - [CMD vs entrypoint](docker/basic/104-dockerfile/entrypoint/README.md)
 
 - [Lab 201: Docker volume](docker/basic/201-volume/README.md)
 
@@ -93,6 +99,10 @@
   - [測試](docker/project/java/mvn-test/README.md)
   - [運行](docker/project/java/mvn-run/README.md)
   - [打包](docker/project/java/mvn-package/README.md)
+
+- Lab 702: docker-compose
+  - [run and up](docker/compose/run_up/README.md)
+  - [其他指令](docker/compose/other_command/README.md)
 
 - Lab 703: java 範例專案使用 docker-compose 進行建置 (1 hour)
 
