@@ -55,9 +55,9 @@
   - [expose](docker/basic/202-network/expose/README.md)
   - [create](docker/basic/202-network/create/README.md)
   - [port](docker/basic/202-network/port/README.md)
-  
-- [Lesson 3: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
 
+- [Lesson 3: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
+  - [install](docker/machine/install/README.md)
   - [drive](docker/machine/drive/README.md)
   - [create](docker/machine/create/README.md)
   - [env](docker/machine/env/README.md)
@@ -111,6 +111,11 @@
   - [練習：搭配 jenkins 建立 production deploy task](docker/pratice/jenkins-docker-prod-deploy-task.md)
 
 - [Lab 801: java jenkins 2.0 Pipeline 使用 Docker 進行專案建置 (1 hour)](docker/jnekins2/pipeline/build/README.md)
+
+- Lab 901: docker swarm
+
+  -	[local network cluster](docker/swarm/local/README.md)
+  - [overlay network cluster](docker/swarm/overlay/README.md)
 
 - Appendix: 環境安裝建置
 
