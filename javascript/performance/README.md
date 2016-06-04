@@ -142,69 +142,70 @@ function getProperty(oString) {
 
 
 
-### 偽裝的eval
+### 偽裝的 eval
 
-定時函數 setTimeout和setInterval都可以接受字符串作為它們的第一個參數。這個字符串總是在全局作用域中執行，這個特性絕對不要使用，因為它在內部使用了eval。
+定時函數 setTimeout 和 setInterval 都可以接受 String 程式作為它們的第一個參數。這個 String 所執行的程式總是在全域作用域中執行，這個特性絕對不要使用，因為它在內部使用了 eval。
 
+```
 function foo ()  {
-    //將會被調用
+    //將會被呼叫
 }
 
 function bar ()  {
     function foo ()  {
-        //不會被調用
+        //不會被呼叫，因為他會執行全域的函式。
     }
     setTimeout ( 'foo()' ,  1000 );
 }
-bar ();
+bar();
 
-由於eval在這種情況下不是被直接調用，因此傳遞到setTimeout的字符串會自全局作用域中執行；因此，上面的回調函數使用的不是定義在bar作用域中的局部變量foo。
+```
+由於 eval 在這種情況下不是被直接呼叫，因此傳到到 setTimeout 的 String 會在全域作用域中執行；因此，上面的範例使用的不是定義在 bar 這函式 scope 中的區域函式 foo。
 
-建議不要在調用定時器函數時，為了向回調函數傳遞參數而使用字符串的形式，這麼寫的代碼明顯質量很差。
+建議不要在執行 setTimeout 時，為了執行函式，傳遞參數使用 String 的形式，如下：
 
-	function foo ( a , b , c )  {}
+```
+	function foo( a , b , c ) {}
 
 	//不要這樣做
-	setTimeout ( 'foo(1,2, 3)' ,  1000 )
+	setTimeout('foo(1, 2, 3)',  1000)
 
 	//可以使用匿名函數完成相同功能
-	setTimeout ( function ()  {
-	    foo ( a , b , c );
-	},  1000 )
+	setTimeout(function ()  {
+		foo( a, b, c);
+	}, 1000)
+```
 
-當需要向回調函數傳遞參數時，可以創建一個匿名函數，如上例，在函數內執行真實的回調函數，如此一來可避免使用 eval。
+當需要執行函式時，可以建一個匿名函數，如上例，在函數內執行真實的函數，如此一來可避免使用 eval。
 
 
 
 ### 安全問題
 
-eval 也存在安全問題，因為它會執行任意傳給它的代碼，在代碼字符串未知或者是來自一個不信任的源時，絕對不要使用eval函數。
+eval 也存在安全問題，因為它會執行任意傳給它的 code。
 
 ### 結論
 
-在任何情況下我們都應該避免使用eval函數。99.9%使用eval的場景都有不使用 eval的解決方案，任何使用它的代碼都會在它的工作方式，性能和安全性方面受到質疑。如果一些情況 ​​必須使用到eval才能正常工作，首先它的設計會受到質疑，這不應該是首選的解決方案，一個更好的不使用eval的解決方案應該得到充分考慮並優先採用。
+在任何情況下我們都應該避免使用 eval 函數。99.9% 使用 eval 的場景都有不使用 eval 的解決方案。
 
-在Opera 9, Firefox, 和Internet Explorer 中後者比前者快95%，在Safari 中快85%。(注意此比較中不含函數本身調用時間。)
+在Opera 9, Firefox, 和Internet Explorer 中後者比前者快 95%，在 Safari 中快 85%。
 
 特別需要提醒一下：在將 json String 轉換為 json Object 的時候，有些文章會有類似範例使用 eval 進行轉換，應該避免使用
-
-建議可使用下列 js lib: [JSON-js](https://github.com/douglascrockford/JSON-js)
-
-
 
 
 ## 11. 自動分號插入
 
-儘管JavaScript有C的代碼風格，但是它不強制要求在代碼中使用分號，實際上可以省略它們。
+儘管 JavaScript 有 C 的代碼風格，但是它不強制要求在代碼中使用分號，實際上可以省略它們。
 
-JavaScript不是一個沒有分號的語言，恰恰相反上它需要分號來就解析源代碼。因此JavaScript解析器在遇到由於缺少分號導致的解析錯誤時，會自動在源代碼中插入分號。
+JavaScript 不是一個沒有分號的語言，恰恰相反上它需要分號來就解析程式碼。因此 JavaScript 解析器在遇到由於缺少分號導致的解析錯誤時，會自動在程式碼中插入分號。
 
-自動的分號插入被認為是JavaScript語言最大的設計缺陷之一，因為它能改變代碼的行為。
+自動的分號插入被認為是 JavaScript 語言最大的設計缺陷之一，因為它能改變程式碼的行為。
 
 ### 運作原理
 
-下面的代碼沒有分號，因此解析器需要自己判斷需要在哪些地方插入分號。
+下面的程式碼沒有分號，因此解析器需要自己判斷需要在哪些地方插入分號。
 
+```
 	( function ( window ,  undefined )  {
 	    function test ( options )  {
 	        log ( 'testing!' )
@@ -230,9 +231,11 @@ JavaScript不是一個沒有分號的語言，恰恰相反上它需要分號來�
 	( function ( window )  {
 	    window . someLibrary =  {}
 	})( window )
+```
 
 下面是解析器"猜測"的結果。
 
+```
 	( function ( window ,  undefined )  {
 	    function test ( options )  {
 
@@ -257,18 +260,18 @@ JavaScript不是一個沒有分號的語言，恰恰相反上它需要分號來�
 	})( window )( function ( window )  {
 	    window . someLibrary =  {};  // <-插入分號
 	})( window );  //<-插入分號
+```
 
-
-建議絕對不要省略分號，同時也提倡將花括號和相應的表達式放在一行，對於只有一行代碼的if或者else表達式，也不應該省略花括號。這些良好的編程習慣不僅可以提到代碼的一致性，而且可以防止解析器改變代碼行為的錯誤處理，雖然 javascript 沒有強制檢查，但好的習慣可以避免不必要的麻煩。
+建議絕對不要省略分號，同時也提倡將大括號和相應的表達式放在一行，對於只有一行代碼的 if 或者 else 表達式，也不應該省略大括號。可以防止解析器改變代碼行為的錯誤處理，雖然 javascript 沒有強制檢查，但好的習慣可以避免不必要的麻煩。
 
 
 ## 12. 不要在影響性能的關鍵函數中使用try-catch-finally
 
-try-catch-finally 結構比較特殊。和其他語法結構不同，它在 runtime 的當前作用域中創建新變量。每當catch執行時，就會將捕獲到的 exception 對象賦給一個變量。這個變量不屬於任何腳本。它在 catch 語句開始時被創建，在結束時被銷毀。
+try-catch-finally 結構比較特殊。和其他語法結構不同，它在 runtime 的當前作用域中創建新變量。每當 catch 執行時，就會將 catch 到的 exception 對象賦給一個變數。這個變數不屬於任何 script。它在 catch 語句開始時被建立，在結束時被銷毀。
 
-由於此函數比較特殊，且是在運行時動態創建動態銷毀，有些瀏覽器對其的處理並不高效。把catch 語句放在關鍵循環中將極大影響性能。
+由於此函數比較特殊，且是在運行時動態 create 動態 destroy，有些瀏覽器對其的處理效率較差。把 catch 語句放在較大的迴圈中將極大影響性能。
 
-如果可能，應在腳本中不頻繁被調用的地方進行異常處理，或通過檢查某種動作是否被支持來避免使用。下面的例子中，如果所需的屬性不存在，將在循環語句中拋出許多異常：
+如果可能，應在 script 中不頻繁被運行的地方進行異常處理，或通過檢查某種動作是否被 support 來避免使用。下面的例子中，如果所需的屬性不存在，將在循環語句中拋出許多異常：
 
 	var oProperties = ['first','second','third',...,'nth'], i;
 	for( i = 0; i < oProperties.length; i++ ) {
@@ -280,8 +283,8 @@ try-catch-finally 結構比較特殊。和其他語法結構不同，它在 runt
 	}
 
 
-很多情況下，可把 try-catch-finally 結構移到循環外部。這樣做稍微改變了程序語義 ​​，因為如果拋出異常，將停止整個循環：
-有時可用屬性檢測或其他檢測代替 try-catch-finally 結構：
+很多情況下，可把 try-catch-finally 結構移到迴圈外部​​，如果 throw 異常，將停止整個迴圈：
+有時可用屬性檢查或其他檢查代替 try-catch-finally 結構：
 
 	var oProperties = ['first','second','third',...,'nth'], i;
 	try {
@@ -294,9 +297,9 @@ try-catch-finally 結構比較特殊。和其他語法結構不同，它在 runt
 
 ## 13. location.replace()控制歷史項
 
-有時需要通過腳本修改頁面地址。常見的方法是給location.href賦新地址。這將和打開新鏈接一樣添加新歷史項、載入新頁面。
-有時不想添加新歷史項，因為用戶不需要回到前面的頁面。這在內存資源有限的設備中很有用。通過替換歷史項恢復當前頁面所使用的內存。可以通過location.replace()方法實現。
+有時需要透過 script 修改 url。常見的方法是變更 location.href。這將和打開新 link 一樣新增歷史紀錄、載入新頁面。
+有時不想新增歷史紀錄，因為使用者不需要回到前面的頁面。這在記憶體資源有限的機器中很有用。透過替換歷史紀錄釋出當前頁面所使用的記憶體。可以透過location.replace()方法來進行。
 
-注意頁面仍被保存在cache 中，仍佔用內存，但比保存在歷史中要少的多。
+注意 page 仍被保存在 cache 中，仍佔用記憶體，但比存在歷史紀錄中要少的多。
 
 [1]: http://smlsun.com/blog/2013/02/01/javascript-about-scope/

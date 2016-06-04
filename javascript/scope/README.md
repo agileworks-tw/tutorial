@@ -29,7 +29,7 @@ scope 的產生與函式息息相關，首先必須先了解函式的運作
 
 ## scope 的運作原理
 
-當你定義一個全域函式的時候，那根據 ECMAScript 規格，它就會有一個 [[Scope]]屬性，而這個 [[Scope]] 會指到一個 Scope Chain Table，這個 table 裡面存放一個指到 global variables 的 table。
+當你定義一個全域函式的時候，那根據 ECMAScript 規格，它就會有一個 [[Scope]] 屬性，而這個 [[Scope]] 會指到一個 Scope Chain Table，這個 table 裡面存放一個指到 global variables 的 table。
 
 
 ![img](http://2.bp.blogspot.com/-gugDSqh-lUg/T_XMYmUT5fI/AAAAAAAAXUE/WqDmooAtSwM/s1600/scope.jpeg)
@@ -56,6 +56,7 @@ scope 的產生與函式息息相關，首先必須先了解函式的運作
 所以在 with 的範圍內，所有原本的 local variables 的存取都變慢了。另外，try/catch 也一樣有這個問題。
 
 在 closure 的部分，可以想像的是至少會有三個 scope chain，一個是 global，一個是 containing function 的 activation context，還有一個是最前面的 local。可以想見 closure 的使用也會影響資料存取的效能，因為存取階層變多的關係。
+
 
 ## 效能改善相關
 

@@ -17,6 +17,7 @@
 
 我們可以做個實驗理解一下：
 
+```
 	var myVar = 'Hello';
 	function myFunc() {
 		return 123;
@@ -27,9 +28,11 @@
 	};
 
 	console.log(global);
+```
 
 執行以上程式，你應該可以從 global 中找到我們自己定義的變數和函式：
 
+```
 	{
 		...（已省略基本預設的環境變數）...
 		myVar: 'Hello',
@@ -40,23 +43,25 @@
 		},
 		...
 	}
+```
 
 從結果可以發現，所有的物件都以樹狀的形式被 global Object 保存著，無論是變數還是任何一種類型的物件，都是一組組 Key/Value 的存在。而 Value 就是各種不同形態的物件，如字串、函數、陣列、數值等。
 
 所以，移除某物件的 Reference，就意味著將把物件從這棵樹上拔除掉。因此，我們可以直接將該變數設為 null：
 
-	myVar = null;
+`myVar = null;`
 
 由於該變數被設為 null，原本的字串（包含著『Hello』）物件就失去了依附的樹枝，如枯葉般從樹上掉下來，等著 Garbage Collection 來回收它。對於開發者而言，其實就是告訴 GC 我不需要這物件了，隨時可以把這個物件的記憶體釋放。
 
 然而，雖然變數被設為 null 後，原本的物件被釋放了，但該變數還是存在的，別忘了，他是一個在 global Object 中的 Key，現在只是沒有 Value 為 null 而已。要真正把這個變數給刪除，這時就要用到 delete 關鍵字。如果你去查一下 JavaScript 的 API 參考文獻，就會發現 delete 關鍵字其實是拿來刪除 Object 中的一組 Key/Value。因此，既然 JavaScript 所有的變數其實都只是一組存放在 global Object 的 Key/Value，我們理所當然可以用 delete 關鍵字去移除掉他：
 
-	delete myVar;
+`delete myVar;`
 
-知曉了 JavaScript 的記憶體管理機制後，你就會了解使用 delete 關鍵字和將變數設為 null，其實並不是代表物件就會被釋放，只是砍樹枝去減少物件的 Reference。
+了解了 JavaScript 的記憶體管理機制後，你就會了解使用 delete 關鍵字和將變數設為 null，其實並不是代表物件就會被釋放，只是砍樹枝去減少物件的 Reference。
 
 此外，如果一個物件有多個 Reference，只是單單刪其中一個也不會讓物件被 GC 釋放：
 
+```
 	var myVar = 'Hello';
 	var myVar1 = myVar;
 
@@ -64,7 +69,7 @@
 	delete myVar;
 
 	console.log(myVar1);
-
+```
 
 以上的程式會顯示『Hello』字串，該物件並不會因為失去 myVar 這 Reference 而被 GC 移除。若想要這一個字串被釋放，必需清空物件所有的 Reference（包括 myVar 和 myVar1），才能讓物件具有被 GC 回收的條件。所以，如果你不小心讓一個不明顯的變數勾搭上了物件，然後你忘記了這個變數的存在，很有可能就會造成 Memory Leaks，讓以為已經被釋放的物件，偷偷存活在於記憶體上。
 
@@ -99,6 +104,7 @@ mark-and-sweep（標記清除）算法，即：
 
 下面例子是全域變數之 Reference 沒有確實清除的情形：
 
+```
 	function Library(name){
 		this.name = name;
 	}
@@ -116,6 +122,7 @@ mark-and-sweep（標記清除）算法，即：
 		var lib2 = PIPI.Mapping[0];
 		lib2 = null;
 	})();
+```
 
 一旦上面得程式碼執行後，可以透過 chrome 的開發者工具中的 Profiles 來觀看變數的使用情形，如下圖：
 
@@ -125,12 +132,14 @@ mark-and-sweep（標記清除）算法，即：
 
 透過該工具的協助既然知道了有哪些 Reference 沒有確實清除，要解決此問題就簡單多了只要加入：
 
-
+```
 	PIPI.Mapping[0] = null ;
 	externLib = null ;
+```
 
 將 Reference 清除，完成程式碼如下：
 
+```
 	function  Library(name){
 			this .name = name;
 	}
@@ -157,6 +166,7 @@ mark-and-sweep（標記清除）算法，即：
 		externLib = null ;
 		//引用數-1：0
 	})();
+```
 
 接著我們在用 chrome 的開發者工具檢視，如下圖：
 
@@ -179,257 +189,3 @@ mark-and-sweep（標記清除）算法，即：
 
 
 > 一旦客戶說速度變得異常的慢，記憶體標高時，就是時候分析客戶目前瀏覽器關於記憶體使用的 profile，麻煩使用者改用 chrome 在關鍵時刻，請他將瀏覽網頁 snapshot 起來分析一下囉！
-
-
-
-
-所謂的 __不正常__ leaks 情形，幾乎只有在 IE 瀏覽器中會出現，以下將詳細說明在 IE 中為什麼會造成 leaks，首先必須先了解在舊版 IE 中 GC 的運作與現在的瀏覽器有什麼不同。
-
-> 如果所開發的產品不考慮 IE 的使用者，那可以直接跳過下面這段，以下所敘述的問題其實也只在舊版的 IE6 以前會有問題，不過... 基本上世界上還是有不少 IE 的舊版，了解一下並且盡量避免可以活的比較快樂...
-
-## IE 中 Leaks
-
-### JScript 與 Native Object(om、ActiveX Object) 交互參照，造成 leaks
-
-在 IE6 中，對於 GC 的判定有兩種情形：
-
-1. javascript object內部：jscript使用的是mark-and-sweep（標記清除）算法
-2. javascript object與外部object：(包括native object和vbscript object等等)的引用時，IE 6使用的是計數器的算法。
-
-因為第 2 點的狀況GC算法是計數器，因此只碰到循環 引用就會造成 memory leakage，也就是說 IE6 中 JScript 的 GC 算法使用的是 nongeneration mark-and-sweep。
-
-對於 javascript 對算法的實現缺陷，也就是說，IE 6 對於純粹的 Script Objects 間的 Circular References 是可以正確處理的，可惜它處理不了的是 JScript 與 Native Object (例如Dom、ActiveX Object) 之間的 Circular References。
-
-所以，當我們出現Native對象 (例如Dom、ActiveX Object) 與 Javascript 對象間的循環引用時，內存泄露的問題就出現了。
-
-> 好消息是，這個bug在 IE 7 中已經被修復了！
-
-簡單的例子來重現這個問題：
-
-
-	< html >
-		< head >
-			< script language = " JScript " >
-
-				var  myGlobalObject;
-
-				function  SetupLeak(){  // 產生循環引用，因此會造成內存泄露
-					//  First set up the script scope to element reference
-					myGlobalObject  =
-						document.getElementById( " LeakedDiv " );
-
-					//  Next set up the element to script scope reference
-					document.getElementById( " LeakedDiv " ).expandoProperty  =
-						myGlobalObject;
-				}
-
-
-				function  BreakLeak()  // 解開循環引用，解決內存泄露問題
-				{
-					document.getElementById( " LeakedDiv " ).expandoProperty  =
-							null ;
-				}
-			</ script >
-		</ head >
-
-		< body onload = " SetupLeak() "  onunload = " BreakLeak() " >
-			 < div id = " LeakedDiv " ></ div >
-		</ body >
-	</ html >
-
-上面這個例子，很簡單就能夠解決內存泄露的問題。可惜的是，當結構復雜了以後，造成循環引用的原因開始變得多樣，我們就沒法那麽容易觀察到了，這時候，我們必須對代碼進行仔細的檢查。尤其是當碰到...
-
-### Closure 中的 leaks
-
-
-當我們針對 Native Object (例如Dom對象、ActiveX Object)上綁定事件時，一不小心就會制造出 Closure Memory Leak 。其關鍵原因，其實和前者是一樣的，也是一個跨 javascript object 和 native object 的交互引用。只是代碼更為隱蔽。但在使用類似內嵌函數的時候，內嵌的函數有擁有一 個 reference 指向外部函數的 scope ，包括外部函數的參數，因此也就很容易造成一個很隱蔽的循環引用
-
-下列例子可以說明該隱蔽性：
-
-	< html >
-		< head >
-			< script language = " JScript " >
-
-				function  AttachEvents(element){
-
-					//This structure causes element to ref ClickEventHandler  
-					//element有個引用指向函數ClickEventHandler()
-
-					element.attachEvent("onclick" , ClickEventHandler);
-
-					function  ClickEventHandler(){
-
-						//This closure refs element  
-						//該函數有個引用指向AttachEvents(element)調用Scope，也就是執行了參數 element。 			element.click();
-
-					}
-				}
-
-				function  SetupLeak(){
-
-					//The leak happens all at once
-					AttachEvents(document.getElementById( " LeakedDiv " ));
-				}
-
-			</ script >
-		</ head >
-
-		< body onload = " SetupLeak() "  onunload = " BreakLeak() " >
-			< div id = " LeakedDiv " ></ div >
-		</ body >
-	</ html >
-
-還有這個例子在IE6 中同樣原因會引起 leaks
-
-	function  leakmaybe() {
-		var  elm  =  document.createElement( " DIV " );
-		elm.onclick  =   function () {
-			return   2   +   2 ;
-		}
-	}
-
-	for  ( var  i  =   0 ; i   10000 ; i ++ ) {
-		leakmaybe();
-	}
-
-
-當然既然已經知道問題，拜網路上的大大所助...
-
-
-### 簡單的 leaks 解決方案
-
-當離開網頁時，透過 onunload 事件綁定，清除所有與 DOM 綁定的事件，如下
-
-	if (window.attachEvent) {
-		var clearElementProps = [
-			'data',
-			'onmouseover',
-			'onmouseout',
-			'onmousedown',
-			'onmouseup',
-			'ondblclick',
-			'onclick',
-			'onselectstart',
-			'oncontextmenu'
-		];
-
-		window.attachEvent("onunload", function() {
-			var el;
-			for(var d = document.all.length;d--;){
-				el = document.all[d];
-				for(var c = clearElementProps.length;c--;){
-					el[clearElementProps[c]] = null;
-				}
-			}
-		});
-	}
-
-由上面的程式碼可以了解到關於 leak 的解決方式，當然也有更嚴謹的解決方式可參考下列文章：
-
-* [event-cache](http://novemberborn.net/javascript/event-cache)
-* [js-memory-leaks](http://talideon.com/weblog/2005/03/js-memory-leaks.cfm)
-* [用innerHTML 代替 appendChild，避開互相參照](http://birdshome.cnblogs.com/archive/2005/02/16/104967.html)
-
-接著介紹其他幾種特別的 leaks 類型，同樣的也只有 IE 會遇到
-
-
-### Cross-Page Leaks
-
-直接看以下例子:
-
-	< html >
-		< head >
-			< script language = " JScript " >
-
-			function  LeakMemory()  // 這個函數會引發Cross-Page Leaks
-			{
-				var  hostElement  =  document.getElementById( " hostElement " );
-
-				//  Do it a lot, look at Task Manager for memory response
-
-				for (i  =   0 ; i  <   5000 ; i ++ )
-				{
-					var  parentDiv  = document.createElement( " <div onClick='foo()'> " );
-					var  childDiv  = document.createElement( " <div onClick='foo()'> " );
-
-					//  This will leak a temporary object
-					parentDiv.appendChild(childDiv);
-					hostElement.appendChild(parentDiv);
-					hostElement.removeChild(parentDiv);
-					parentDiv.removeChild(childDiv);
-					parentDiv  =   null ;
-					childDiv  =   null ;
-				}
-				hostElement  =   null ;
-			}
-
-
-			function  CleanMemory()  // 而這個函數不會引發Cross-Page Leaks
-			{
-				var  hostElement  =  document.getElementById( " hostElement " );
-
-				//  Do it a lot, look at Task Manager for memory response
-
-				for (i  =   0 ; i  <   5000 ; i ++ )
-				{
-					var  parentDiv  =   document.createElement( " <div onClick='foo()'> " );
-					var  childDiv  =   document.createElement( " <div onClick='foo()'> " );
-
-					//  Changing the order is important, this won't leak
-					hostElement.appendChild(parentDiv);
-					parentDiv.appendChild(childDiv);
-					hostElement.removeChild(parentDiv);
-					parentDiv.removeChild(childDiv);
-					parentDiv  =   null ;
-					childDiv  =   null ;
-				}
-				hostElement  =   null ;
-			}
-			</ script >
-		</ head >
-
-		< body >
-			< button onclick = " LeakMemory() " > Memory Leaking Insert </ button >
-			< button onclick = " CleanMemory() " > Clean Insert </ button >
-			< div id = " hostElement " ></ div >
-		</ body >
-	</ html >
-
-LeakMemory 和 CleanMemory 這兩段函數的唯一區別就在於他們的代碼的循序，從代碼上看，兩段代碼的邏輯都沒有錯。
-
-但 LeakMemory 卻會造成泄露。原因是 LeakMemory() 會先建立起 parentDiv 和 childDiv 之間的連接，這時候，為了讓 childDiv 能夠獲知 parentDiv 的信息，因此 IE 需要先建立一個臨時的 scope 對象。而後 parentDiv 建立了和 hostElement 對象的聯系， parentDiv 和 childDiv 直接使用頁面 document 的 scope 。可惜的是，IE 不會釋放剛才那個臨時的 scope 對象的內存空間，直到我們跳轉頁面，這塊空間才能被釋放。而 CleanMemory 函數不同，他先把 parentDiv 和 hostElement 建立聯系，而後再把 childDiv 和 parentDiv 建立聯系，這個過程不需要單獨建立臨時的 scope ，只要直接使用頁面 document 的 scope 就可以了， 所以也就不會造成內存泄露了
-
-詳細可參考：[ie_leak_patterns](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/IETechCol/dnwebgen/ie_leak_patterns.asp)
-
-
-### Pseudo-Leaks (秀逗 Leaks)
-
-看看這個例子:
-
-	< html >
-		< head >
-			< script language = " JScript " >
-
-			function  LeakMemory()
-			{
-				//  Do it a lot, look at Task Manager for memory response
-
-				for (i  =   0 ; i  <   5000 ; i ++ )
-				{
-					hostElement.text  =   " function foo() { } " ;／／看內存會不斷增加
-				}
-			}
-			</ script >
-		</ head >
-
-		< body >
-			< button onclick = " LeakMemory() " > Memory Leaking Insert </ button >
-			< script id = " hostElement " > function  foo() { } </ script >
-		</ body >
-	</ html >
-
-從上面的程式碼來看，不停的更新 hostElement.text 照理來說都是同一個位置不應該會有 leaks 的問題但MS是這麽解釋的:
-
-> 這不是內存泄漏。如果您創建了許多無法獲得也無法釋放的對象，那才是內存泄漏。在這裏，您將創建許多元素，Internet Explorer 需要保存它們以正確呈現頁面。Internet Explorer 並不知道您以後不會運行操縱您剛剛創建的所有這些對象的腳本。當頁面消失時（當您瀏覽完，離開瀏覽器時）會釋放內存。它不會泄漏。當銷毀頁面時，會中斷循環引用。
-
-因此，雖然不知道新版的 IE 是否已沒有上述問題，保險起見，避免上述狀況的程式撰寫風格才是上上策。

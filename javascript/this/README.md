@@ -1,5 +1,4 @@
-
-## 到底 this 是誰？ ##
+# what is this
 
 JavaScript 的 code 寫多了，你一定會碰到 this 這個關鍵字，是某個 object 下的 method 也好，或是 callback function 也好，關於 this 的用法常常會讓人搞混。
 
@@ -13,7 +12,7 @@ JavaScript 的 code 寫多了，你一定會碰到 this 這個關鍵字，是某
     <input type ="button"  id ="aButton"  value ="demo" onclick="" />
     <script type ="text/javascript" >
         function  demo()  {
-            this .value  =  Math.random();
+            this.value  =  Math.random();
         }
     </script>
 ```
@@ -101,8 +100,6 @@ onclick ="demo()" 引用的方式中，onclick 事件只是直接調用 demo() �
 
 但是很不幸的 d.startT(); 執行時在 d.startT();裡面的 this.lm 會是 undefind…
 
-Why!!!…… 我死的不明不白阿！
-
 因為：
 
 setTimeout其實是 window.setTimeout() 函數，並不是某個物件觸發的事件，在這種情況下，this 就會指向 window，因為當你呼叫 setTimeout 時，該函數裡的任務會被加入執行對列等候執行，一旦時間到開始執行實際上並不是經由 TT 來觸發而是全域的 window。
@@ -115,17 +112,7 @@ setTimeout(function() { this.alert(this.document.body.innerHTML); }, 100);
 
 又可以this.alert，又有this.document可用，表示 this 在當時指向的是 window。
 
-很玄吧！這樣就知道怎麼死的了… javascript 真的不是你想的那樣…單純！
-
 既然如此我們要怎麼解決此問題？？？
-
-> 20130207 下面是錯誤的理解，感謝與我討論的朋友
->
->1. this 在沒指定對象的情況下，就是函數當前的作用域
->2. 看起來 this 曾經是 Object，function TT 被 Object 呼叫，但是一旦 TT 被 new 出來成為  d 之後，狀況又回到單獨呼叫 TT(); 的狀況，this 變為 window
->3. 又因為 closure 的特性包的是變數，而不是變數值，所以一旦 TT 成為 d 之後在 function TT() >底下的 this 隨即成為 window，this 變數還在，改變的是所存的內容，因為變數已被指向 window 所以就爆…炸…了…
-
-
 
 
 ## 解決 setTimeout 中的 this 是 window 的情況
@@ -143,14 +130,6 @@ setTimeout(function() { this.alert(this.document.body.innerHTML); }, 100);
 ```
 
 利用 closure 關閉的是變數的概念，我們只要在外面宣告 ``var that = this;``，此時原本的 this 就會變為區域變數 that，當 setTimeout 執行函數時因為 that 因為 closure 的特性讓 setTimeout 存取操作 that 也就是 TT 的屬性，解決直接在 setTimeout 中使用 this 造成對象錯誤的情形。
-
-
-
-
-> 20120207 一樣是錯誤的理解，感謝與我討論的朋友
->
-> 上一節中有提到 __closure 的特性包的是變數，而不是變數值__ ，又因為 this 是全域變數，一旦外部因為執行的方式不同，this 就會有所不同，所以我們可以把在 new TT("the message"); 當下正確的 this 指定給區域變數，套物件導向的觀念，如果是物件之間的指定，記得是記憶體位置，而不是複製一份，邏輯上就通啦！在 ``new TT("the message");`` 變成 d 之後 this 變成了 window，但是在 ``new TT("the message");`` 當下已經將 Object 的位置給了 that，所以此時 that 指定為 Object，如此一來 this 當下的狀態就被綁定在 that 上，這樣就可以讓存在 this.lm 裡的訊息，透過 that 來取用。
-
 
 接著剛剛有提到「沒指定的話」就是函數當前的作用域，所以這也就代表了「可以指定」，透過...
 
@@ -223,9 +202,7 @@ foo.apply(bar, ['abc','def']);
 * [棕熊@Think Fast][2]
 * [ericsk.net][3]
 
-此篇文章是把上面三個來源的內容進行融合，挑選比較淺顯易懂得部分，加上我個人的淺見跟理解過後加以補述，希望可以幫助對於 this 不是很清楚的人。當然我因為那個領悟還很新鮮，菜味很重，如果有不對還請指教… 麻煩打臉時小力一點～ ㄎ…
-
->20130207 教學真的會相長阿！ ^_^
+此篇文章是把上面三個來源的內容進行融合，挑選比較淺顯易懂得部分，加上我個人的淺見跟理解過後加以補述，希望可以幫助對於 this 不是很清楚的人。
 
 
 

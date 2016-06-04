@@ -27,8 +27,6 @@ JavaScript 中的 closure 是初學者比較難理解的觀念，下面是幾個
   > jibbering.com
 
 
-本來想將上面的解釋翻譯成中文，發現中文對特定名詞無法很精準的表達，只好讓大家練練英文，有時間在慢慢品嚐，在這直接舉一個實際的例子來看會更容易理解
-
 ``` javascript
   function doSome() {
     var x = 10;
@@ -63,7 +61,7 @@ JavaScript 中的 closure 是初學者比較難理解的觀念，下面是幾個
 
 > Free variables are simply the variables that are neither locally declared nor passed as parameter.
 
-聽起來很玄，翻譯起來就是 Free variable 代表不是 function 的參數，x 之所以稱為 Free variable 也就是因為在 f 這個 function 外面被宣告，也沒有透過 function 的參數傳入，但是在 f 裡面卻可以存取。
+翻譯起來就是 Free variable 代表不是 function 的參數，x 之所以稱為 Free variable 也就是因為在 f 這個 function 外面被宣告，也沒有透過 function 的參數傳入，但是在 f 裡面卻可以存取。
 
 另外 Closure 有 lexical scope 的特性，所謂的 lexical scope 就是讓我們可以用區域變數的方式，把變數當作一個 function 物件的 private member，但是又可以用一個 function 當作 getter/setter 來存取他，如同：
 
