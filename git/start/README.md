@@ -2,13 +2,11 @@
 
 ## 專案初始
 
-git init
+建立本地端數據庫：為了方便用戶個人使用，在自己的機器上配置的數據庫。
 
-## 取出遠端專案
+透過下列指令進行初始
 
-`git clone /path/to/repository`
-
-`git clone username@host:/path/to/repository`
+`git init`
 
 ## 工作流程
 
@@ -24,7 +22,12 @@ git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [-
                  [--] [<pathspec>...]
 ```
 
+### 新增特定檔案
+
 `git add <filename>`
+
+### 新增全部檔案
+
 `git add .`
 
 ### Index (stage)
