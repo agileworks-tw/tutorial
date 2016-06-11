@@ -7,3 +7,7 @@
 ## 執行指令 pull
 
 `git pull`
+
+## fast-forward 合併
+
+將遠端分支合併到我們的本地端分支

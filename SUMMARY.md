@@ -29,7 +29,11 @@
     - Branch
     - merge
   - 進階
+    - Stash
     - rebase
+    - squash
+    - revert
+    - amend
     - cherry pick
     - add remote
     - fork
