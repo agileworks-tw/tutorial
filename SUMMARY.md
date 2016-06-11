@@ -6,6 +6,38 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
+- git
+
+  - 基礎
+    - [初始 Git 專案](git/start/README.md)
+    - [Push 專案至 GitHub](git/push/README.md)
+    - [復原/取出特定版控檔案](git/checkout/README.md)
+    - [log 使用](git/log/README.md)
+    - [建立 Branch (分支)](git/branch/README.md)
+    - [合併 Branch (分支)](git/merge/README.md)
+    - [reset 使用](git/reset/README.md)
+    - [tag 使用](git/tag/README.md)
+
+  - [什麼是 Git Flow](git/flow/README.md)
+  - 搭配 SourceTree 進行版本控制
+    - 查看圖形化 log
+    - 查看 diff
+    - 編修衝突
+    - Reset
+    - Branch
+    - merge
+  - 進階
+    - rebase
+    - cherry pick
+    - add remote
+    - fork
+    - upstream sync
+    - pull request
+  - 其他 GitHub 功能
+    - issues
+    - ZenHub
+    - Milestone
+
 - [Docker](docker/README.md)
 
   - [Meet Docker](docker/000-intro/README.md)
