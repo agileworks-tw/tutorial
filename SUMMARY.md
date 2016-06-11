@@ -13,6 +13,8 @@
     - [Push 專案至 GitHub](git/push/README.md)
     - [clone 已建立之遠端專案](git/clone/README.md)
     - [復原/取出特定版控檔案](git/checkout/README.md)
+    - [Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
+    - [fetch remote 專案最新變動(不合併遠端分支)](git/fetch/README.md)
     - [log 使用](git/log/README.md)
     - [建立 Branch (分支)](git/branch/README.md)
     - [合併 Branch (分支)](git/merge/README.md)
