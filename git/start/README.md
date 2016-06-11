@@ -58,3 +58,13 @@ git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run]
                   [--force-with-lease[=<refname>[:<expect>]]]
                   [--no-verify] [<repository> [<refspec>...]]
 ```
+
+### 練習創建第一個 git 版本控制專案
+
+1. 新增資料夾 git-tutorial
+2. 進入 git-tutorial 資料夾
+2. 新增檔案 README.md
+3. 執行 `git init` 初始化專案
+4. 執行 `git add .` 加入所有變更的檔案
+5. 執行 git commit -m 'init'
+6. 完成第一個版本控制
