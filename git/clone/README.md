@@ -13,7 +13,7 @@
 
 ## 練習
 
-1. 進入網址 <https://github.com/agileworks-tw/java-hello-world>
+1. 進入網址 <https://github.com/agileworks-tw/git-hello-world>
 2. 取得 https git url
 3. 執行 `git clone <https git url>`
 4. 確認專案以複製完成
