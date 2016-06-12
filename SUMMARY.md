@@ -13,16 +13,17 @@
     - [Push 專案至 GitHub](git/push/README.md)
     - [clone 已建立之遠端專案](git/clone/README.md)
     - [復原/取出特定版控檔案](git/checkout/README.md)
+    - [log 使用](git/log/README.md)
     - [Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
     - [fetch remote 專案最新變動(不合併遠端分支)](git/fetch/README.md)
-    - [log 使用](git/log/README.md)
+    - [什麼是 Git Flow](git/flow/README.md)
     - [建立 Branch (分支)](git/branch/README.md)
     - [合併 Branch (分支)](git/merge/README.md)
     - [編修衝突](git/conflict/README.md)
     - [reset 使用](git/reset/README.md)
     - [tag 使用](git/tag/README.md)
 
-  - [什麼是 Git Flow](git/flow/README.md)
+
   - 搭配 SourceTree 進行版本控制
     - 查看圖形化 log
     - 查看 diff

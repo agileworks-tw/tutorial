@@ -10,6 +10,11 @@ checkout 可用於將特定版本檔案取出，無論是資料夾或檔案皆�
 
 `git checkout <foldername>`
 
+## 取出特定分支
+
+`git checkout <branchname>`
+
+
 
 ## 練習
 
