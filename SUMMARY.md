@@ -6,7 +6,7 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
-- git
+- [git](./git/README.md)
 
   - 基礎
     - [初始 Git 專案](git/start/README.md)
@@ -22,7 +22,6 @@
     - [編修衝突](git/conflict/README.md)
     - [reset 使用](git/reset/README.md)
     - [tag 使用](git/tag/README.md)
-
 
   - 搭配 SourceTree 進行版本控制
     - 查看圖形化 log
