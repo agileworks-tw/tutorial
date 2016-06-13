@@ -7,6 +7,11 @@ git fetch origin
 git reset --hard origin/master
 ```
 
+## 檔案 unstaged
+
+也就是取消 `git add <file>` 把檔案加入 index，回覆到未加入前
+
+`git reset <filename>`
 
 ## reset 的類型及主要使用的場合
 
