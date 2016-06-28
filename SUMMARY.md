@@ -46,6 +46,16 @@
     - ZenHub
     - Milestone
 
+- javascript
+
+  - [this](javascript/this/README.md)
+  - [scope](javascript/scope/README.md)
+  - [callback](javascript/callback/README.md)
+  - [Closure](javascript/closure/README.md)
+  - [settimeout](javascript/settimeout/README.md)
+  - [performance](javascript/performance/README.md)
+  - [Memory Leaks](javascript/memory_leak/README.md)
+
 - [Docker](docker/README.md)
 
   - [Meet Docker](docker/000-intro/README.md)
