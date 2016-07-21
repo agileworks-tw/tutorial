@@ -123,7 +123,8 @@
   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)
-     * [使用 GitHub Organization 進行建置](jenkins/jenkins2/pipeline/github-organization/README.md)
+     * [使用 GitHub Organization 進行建置](jenkins/jenkins2/github-organization/README.md)
+     * [使用 Multibranch Pipeline 進行建置](jenkins/jenkins2/multibranch-pipeline/README.md)
   * Q & A
      * [一般問題](jenkins/QA/general.md)
      * [JAVA](jenkins/QA/java.md)
