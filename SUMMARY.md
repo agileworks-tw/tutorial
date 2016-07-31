@@ -131,8 +131,9 @@
     * [Checkstyle 使用與報表產出設置](./jenkins/check/checkstyle/README.md)
     * [PMD(source code analyzer) 使用與報表產出設置](./jenkins/check/pmd/README.md)
     * [CPD(Copy/Paste Detector) 使用與報表產出設置](./jenkins/check/dry/cpd//README.md)
-    * FindBugs 使用與報表產出設置
     * Simian 使用與報表產出設置
+    * [FindBugs 使用與報表產出設置](./jenkins/check/findBugs/README.md)
+
   * Q & A
      * [一般問題](jenkins/QA/general.md)
      * [JAVA](jenkins/QA/java.md)
