@@ -1,5 +1,7 @@
 # checkStyle
 
+checkStyle 主要用於檢查 coding style 是否正確，透過 checkStyle 可以讓程式為我們的專案進行 Style 的把關
+
 ## maven POM.xml 設定
 
 透過 maven POM.xml 定義，可以讓我們使用 mvn 指令來進行 checkStyle
@@ -47,3 +49,7 @@
 ![](./result2.png)
 
 ![](./result3.png)
+
+## 參考資料
+
+<http://www.cnblogs.com/huang0925/p/3148389.html>
