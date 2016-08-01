@@ -133,6 +133,9 @@
     * [CPD(Copy/Paste Detector) 使用與報表產出設置](./jenkins/check/dry/cpd//README.md)
     * [Simian 使用與報表產出設置](./jenkins/check/dry/simian/README.md)
     * [FindBugs 使用與報表產出設置](./jenkins/check/findBugs/README.md)
+  * 建置工具
+    * maven
+      * [Multi Module Project](./jenkins/maven/multi-app/README.md)
 
   * Q & A
      * [一般問題](jenkins/QA/general.md)
