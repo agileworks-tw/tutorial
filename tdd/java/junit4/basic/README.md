@@ -51,10 +51,10 @@ public class CalculatorTest {
 ```
 # Compile
 javac Calculator.java
-javac -cp .:junit-4.XX.jar CalculatorTest.java
+javac -cp .:junit-4.12.jar CalculatorTest.java
 
 # Run Test
-java -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
 ```
 
 ## Final Java Class
