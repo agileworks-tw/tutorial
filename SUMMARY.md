@@ -75,10 +75,4 @@
      * [JAVA](jenkins/QA/java.md)
 
 - Appendix
-
   - [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
-  - [Ubuntu install docker](docker/install/ubuntu/README.md)
-  - [Mac OS X install docker](docker/install/osx/README.md)
-  - [docker 參考資料](docker/reference/README.md)
-  - [git 參考資料](git/reference/README.md)
-  - [docker 相關練習解答](docker/pratice/answer.md)
