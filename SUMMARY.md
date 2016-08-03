@@ -61,7 +61,7 @@
     - [JUnit 與 Maven](./tdd/java/junit4/maven/README.md)
     - [Rules]
     - [Assertions]
-    - [Test Fixtures]
+    - [Test Fixtures](./tdd/java/junit4/test-fixture//README.md)
     - [Continuous Testing]
     - [Junit 測試 API](./tdd/java/junit4/api-test/README.md)
     - [JUnit Test Suite](./tdd/java/junit4/suite/README.md)

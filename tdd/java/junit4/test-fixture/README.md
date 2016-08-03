@@ -39,7 +39,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestFixturesExample {
+public class TestFixtures {
 
     //  進行函式的 Mock
     static class ExpensiveManagedResource implements Closeable {
