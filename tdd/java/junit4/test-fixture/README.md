@@ -1,13 +1,11 @@
 # test fixture
 
-test fixture 是一組 object 的固定狀態，用來作為執行測試的基礎。 test fixture 的目的是確保測試的環境是已知且固定的，這樣測試結果才會是可重複的。 例如：
+test fixture 用來作為執行測試前的準備工作。目的是確保測試的環境是可重覆驗證，這樣測試結果才會是可重複的。可能使用情境如下：
 
-* 準備輸入資料、建立或設定 fake / mock object。
+* 準備輸入資料、建立或設定 mock object。
 * 載入一組指定、已知的 database 資料
 * 複製一些指定的檔案
 
-
-建立 test fixture 會建立一組初始化為某個狀態的 object。
 
 JUnit 提供 annotation 給 test class 指定在每個測試前後的 fixture、 或是在執行所有 test method 前先執行一次性的 fixture。
 
@@ -25,7 +23,7 @@ JUnit 提供 annotation 給 test class 指定在每個測試前後的 fixture、
 
 在 method level 只要有定義上述 annotation 每次進行 test method 時必會進行，可用於準備測試資料，並在測試完成後進行銷毀。
 
-一個實際使用的例子：
+## 使用範例
 
 ``` java
 package test;
