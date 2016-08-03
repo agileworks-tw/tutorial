@@ -63,7 +63,7 @@
     - [Assertions]
     - [Test Fixtures]
     - [Continuous Testing]
-    - [Junit 測試 Rest API](./tdd/java/junit4/api-test/README.md)
+    - [Junit 測試 API](./tdd/java/junit4/api-test/README.md)
     - [JUnit Test Suite](./tdd/java/junit4/suite/README.md)
 
 - Jenkins
