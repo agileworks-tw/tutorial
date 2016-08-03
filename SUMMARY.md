@@ -46,7 +46,7 @@
     - ZenHub
     - Milestone
 
-- javascript
+- JavaScript
 
   - [this](javascript/this/README.md)
   - [scope](javascript/scope/README.md)
@@ -57,11 +57,16 @@
   - [Memory Leaks](javascript/memory_leak/README.md)
 - TDD(測試驅動開發方式)
   - Java
-    - [JUnit 基礎](./tdd/java/junit/basic/README.md)
-    - [Junit 進行 rest api 測試](./tdd/java/junit/api-test/README.md)
-    - [JUnit Suite 使用](./tdd/java/junit/junit-suite-test/README.md)
+    - [JUnit 基礎](./tdd/java/junit4/basic/README.md)
+    - [JUnit 與 Maven](./tdd/java/junit4/maven/README.md)
+    - [Rules]
+    - [Assertions]
+    - [Test Fixtures]
+    - [Continuous Testing]
+    - [Junit 測試 Rest API](./tdd/java/junit4/api-test/README.md)
+    - [JUnit Test Suite](./tdd/java/junit4/suite/README.md)
 
-- jenkins
+- Jenkins
 
   * [Introduction](jenkins/README.md)
   * [Quick Start](jenkins/workshop/README.md)
