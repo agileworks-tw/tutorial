@@ -2,6 +2,19 @@
 
 Maven 是被廣泛使用的 Java 專案建置工具（Build tools），這個單元我們使用 Maven 來建置與測試 Java 範例專案。
 
+## Usage
+
+我們可以對 `pom.xml` 設置 `<dependency>` 來加入 `junit:junit:4.12` 的 Maven Dependency，設定方式如下：
+
+```
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+  </dependency>
+```
+
 ## Maven Surefire Plugin
 
 Maven 負責執行測試的 Plugin 名為 `maven-surefire-plugin`，它預設會使用 JUnit 測試框架，但不侷限於 JUnit，你也可以使用其他常見 Java 測試框架如 TestNG 等。
@@ -62,11 +75,21 @@ File Name: `pom.xml`
 </project>
 ```
 
-執行：
+因為 maven 約定大於配置的特性，執行下列指令：
 
 ```
 mvn test
 ```
+
+若只要執行特定的 Test Class 則可以使用參數 `-Dtest=` 來指定，例如：
+
+```
+mvn -Dtest=TestSample test
+```
+
+以這個例子來說，只有名為 `TestSample` 的測試程式會被執行；如果有多個測試程式 Class 同名，則需要加上完整的 Package Name 以作區別。
+
+測試完畢後我們可以在 `target/surefire-reports` 找到輸出的測試結果，包括 `.xml` 與 `.txt` 的格式。為了方便相關人員查看結果，我們可以利用 Jenkins 來輸出更容易閱讀的測試報告。
 
 ## Running Tests in Parallel
 

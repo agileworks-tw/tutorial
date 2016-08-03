@@ -59,11 +59,10 @@
   - Java
     - [JUnit 基礎](./tdd/java/junit4/basic/README.md)
     - [JUnit 與 Maven](./tdd/java/junit4/maven/README.md)
-    - [Rules]
-    - [Assertions]
-    - [Test Fixtures]
-    - [Continuous Testing]
-    - [Junit 測試 Rest API](./tdd/java/junit4/api-test/README.md)
+    - [Assertions](./tdd/java/junit4/assertions/README.md)
+    - [Test Fixtures](./tdd/java/junit4/test-fixture/README.md)
+    - [略過 test](./tdd/java/junit4/test-fixture/README.md)
+    - [Junit 測試 API](./tdd/java/junit4/api-test/README.md)
     - [JUnit Test Suite](./tdd/java/junit4/suite/README.md)
 
 - Jenkins
