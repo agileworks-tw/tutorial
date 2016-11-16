@@ -203,6 +203,7 @@
     - [expose](docker/basic/202-network/expose/README.md)
     - [create](docker/basic/202-network/create/README.md)
     - [port](docker/basic/202-network/port/README.md)
+    - [透過 docker-compose 使用 network](docker/basic/202-network/docker-compose/README.md)
 
   - [Lab 203: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
     - [install](docker/machine/install/README.md)
