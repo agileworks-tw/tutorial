@@ -17,38 +17,25 @@
      * [安裝 Jenkins](jenkins/basic/install.md)
 
   * [CI flow 簡介](jenkins/task/flow.md)
+
   * [Task 實作以 Java + git 為例](jenkins/task/java_git/README.md)
      * [build](jenkins/task/java_git/build.md)
      * [test](jenkins/task/java_git/test.md)
      * [preview](jenkins/task/java_git/preview.md)
      * [release](jenkins/task/java_git/release.md)
 
-  * [搭配 docker 使用 Jenkins 協助測試](jenkins/withDocker/README.md)
-     * [install](jenkins/withDocker/install.md)
-     * [build](jenkins/withDocker/build.md)
-     * [test](jenkins/withDocker/test.md)
-     * [preview](jenkins/withDocker/preview.md)
-     * [release](jenkins/withDocker/release.md)
+   * [Task 實作以 Node.js 為例](jenkins/task/nodejs/README.md)
+      * [build](jenkins/task/nodejs/build.md)
+      * [test](jenkins/task/nodejs/test.md)
+      * [preview](jenkins/task/nodejs/preview.md)
+      * [release](jenkins/task/nodejs/release.md)
+
   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)
      * [使用 GitHub Organization 進行建置](jenkins/jenkins2/github-organization/README.md)
      * [使用 Multibranch Pipeline 進行建置](jenkins/jenkins2/multibranch-pipeline/README.md)
 
-  * 自動化檢查與報表設置
-    * [java doc 使用與報表產出設置](./jenkins/check/javadoc/README.md)
-    * [Checkstyle 使用與報表產出設置](./jenkins/check/checkstyle/README.md)
-    * [PMD(source code analyzer) 使用與報表產出設置](./jenkins/check/pmd/README.md)
-    * [CPD(Copy/Paste Detector) 使用與報表產出設置](./jenkins/check/dry/cpd//README.md)
-    * [Simian 使用與報表產出設置](./jenkins/check/dry/simian/README.md)
-    * [FindBugs 使用與報表產出設置](./jenkins/check/findBugs/README.md)
-  * 建置工具
-    * maven
-      * [Multi Module Project](./jenkins/maven/multi-app/README.md)
-
-  * Q & A
-     * [一般問題](jenkins/QA/general.md)
-     * [JAVA](jenkins/QA/java.md)
 
 - [Docker](docker/README.md)
 
@@ -170,9 +157,6 @@
     * [完整 docker-compose](docker/jnekins2/pipeline/e2e/docker-compose/README.md)
 
 
-- Slack
-  - [github 整合](./slack/github/README.md)
-  - [jenkins 整合](./slack/jenkins/README.md)
 - Appendix
 
   - [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
