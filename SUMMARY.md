@@ -24,12 +24,6 @@
      * [preview](jenkins/task/java_git/preview.md)
      * [release](jenkins/task/java_git/release.md)
 
-   * [Task 實作以 Node.js 為例](jenkins/task/nodejs/README.md)
-      * [build](jenkins/task/nodejs/build.md)
-      * [test](jenkins/task/nodejs/test.md)
-      * [preview](jenkins/task/nodejs/preview.md)
-      * [release](jenkins/task/nodejs/release.md)
-
   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)
