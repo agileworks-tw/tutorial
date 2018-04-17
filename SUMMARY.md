@@ -90,7 +90,7 @@
     - [distribution private](docker/basic/103-registry/distribution-private/README.md)
     - [distribution public](docker/basic/103-registry/distribution-public/README.md)
 
-  - Lab 104: dockerfile
+  <!-- - Lab 104: dockerfile
 
     - [CMD vs entrypoint](docker/basic/104-dockerfile/entrypoint/README.md)
 
@@ -116,7 +116,7 @@
     - [ls](docker/machine/ls/README.md)
     - [使用 docker-machine 連結已存在之遠端 docker engine](docker/machine/exist-remote-docker/README.md)
     - [upgrade](docker/machine/upgrade/README.md)
-    - [rm](docker/machine/rm/README.md)
+    - [rm](docker/machine/rm/README.md) -->
   - Lab 301: 使用 docker 建置 java 開發環境 (1 hour)
     - [運行環境安裝](docker/project/java/env/README.md)
     - [進入 Container 進行建置](docker/project/java/env-docker-build/README.md)
@@ -162,12 +162,12 @@
 
   - [Lab 501: java jenkins 2.0 Pipeline 使用 Docker 進行專案建置 (1 hour)](docker/jnekins2/pipeline/build/README.md)
 
-  - [Lab 502: jenkins 2.0 Pipeline 使用 Docker 進行前端自動化測試 (1 hour)](docker/jnekins2/pipeline/e2e/README.md)
-    * [持續整合流程說明](docker/jnekins2/pipeline/e2e/CI-flow/README.md)
+  <!-- - [Lab 502: jenkins 2.0 Pipeline 使用 Docker 進行前端自動化測試 (1 hour)](docker/jnekins2/pipeline/e2e/README.md)
+    * [持續整合流程git說明](docker/jnekins2/pipeline/e2e/CI-flow/README.md)
     * [檢查所需環境及取出專案](docker/jnekins2/pipeline/e2e/check-checkout/README.md)
     * [建置與測試專案](docker/jnekins2/pipeline/e2e/build-test/README.md)
     * [Production Image 建置](docker/jnekins2/pipeline/e2e/build-prod/README.md)
-    * [完整 docker-compose](docker/jnekins2/pipeline/e2e/docker-compose/README.md)
+    * [完整 docker-compose](docker/jnekins2/pipeline/e2e/docker-compose/README.md) -->
 
 
 - Appendix
