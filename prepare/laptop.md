@@ -19,30 +19,41 @@
 
 我們在課程中會提供實作練習專用的 VM Image，以方便搭配教材內容。
 
-<!--
-4. [使用 AgileWorks 平台及下載上課用 VM 映像檔](AgileWorks.md)
--->
 
 ## 安裝 VirtualBox
 
 依照您的作業系統類型，安裝 5.x 以上最新版本的 VirtualBox 軟體，建議同時安裝「VirtualBox Extension Pack」以支援虛擬機器的進階功能。
 
-VirtualBox 下載頁面 https://www.virtualbox.org/wiki/Downloads
+VirtualBox 下載頁面 
+
+<https://www.virtualbox.org/wiki/Downloads>
 
 ![下載必要的 VirtualBox 安裝檔案](download-virtualbox.png)
 
-安裝 VirtualBox Extension Pack 之步驟可以參考[這份文件](http://www.arthurtoday.com/2011/01/oracle-vm-virtualbox-40-extension-pack_14.html)。
+安裝 VirtualBox Extension Pack 之步驟可以參考:
+
+<http://www.arthurtoday.com/2011/01/oracle-vm-virtualbox-40-extension-pack_14.html>
 
 常見的 VirtualBox 安裝問題：
 
-- [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
+- vt-x amd-v 異常造成 VM 無法開啟，參考下面文章設置: 
+
+<https://www.qnap.com/zh-hk/how-to/faq/article/%E5%A6%82%E4%BD%95%E5%95%9F%E7%94%A8-intel-vt-x-%E5%92%8C-amd-svm>
 
 ## 註冊 GitHub 帳號
 
 本課程會帶你實機操作，課程中將會需要下載範例專案，以及進行 GitHub 與 Docker Hub 串接運用。
 
-如果你還沒有 GitHub 帳號，請在 [GitHub 官方網站](https://github.com/)進行註冊。
+如果你還沒有 GitHub 帳號，請在 GitHub 官方網站:
+
+<https://github.com/>
+
+進行註冊。
 
 ## 註冊 Docker Hub 帳號
 
-如果你還沒有 Docker Hub 帳號，請到 [Docker Hub 網站](https://hub.docker.com/account/signup/) 進行註冊。
+如果你還沒有 Docker Hub 帳號，請到 Docker Hub 網站:
+
+<https://hub.docker.com/account/signup/> 
+
+進行註冊。
