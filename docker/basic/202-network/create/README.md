@@ -12,7 +12,7 @@
 
 ### 啟動 DB container
 
-`docker run -d --net test_net --name db training/postgres`
+`docker run -d --net test_net --name db localhost:5000/training-postgres`
 
 
 `docker network inspect test_net`
@@ -31,11 +31,11 @@
 
 若如下沒有加 net option 預設為 default 如下
 
-`docker run --name web training/webapp ping 172.21.0.2`
+`docker run --name web localhost:5000/training-webapp ping 172.21.0.2`
 
 將沒辦法 ping 到，若同樣加上 --net test_net
 
-`docker run --name web --net test_net training/webapp ping 172.21.0.2`
+`docker run --name web --net test_net localhost:5000/training-webapp ping 172.21.0.2`
 
 將顯示
 

@@ -3,7 +3,7 @@
 讓一個長時間執行的指令在背景運作，可以利用 `-d` 參數。
 
 ```
-docker run -d -it ubuntu ping google.com
+docker run -d -it localhost:5000/training-webapp ping google.com
 ```
 
 參數說明：
@@ -13,8 +13,8 @@ docker run -d -it ubuntu ping google.com
 透過 `docker ps` 查詢容器的狀態：
 
 ```
-CONTAINER ID        IMAGE               COMMAND
-374fb78dab41        ubuntu              "ping google.com"
+CONTAINER ID        IMAGE                        COMMAND
+374fb78dab41        localhost:5000/training-webapp              "ping google.com"
 ```
 
 要如何檢視 `ping google.com` 指令的輸出呢？可以透過 `docker logs` 指令：

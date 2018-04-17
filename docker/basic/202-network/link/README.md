@@ -4,11 +4,11 @@ container 在使用使很多時候需要跟多個 container 進行溝通，舉�
 
 ## 啟動 DB container
 
-`docker run -d --name db training/postgres`
+`docker run -d --name db localhost:5000/training-postgres`
 
 ## 啟動 web container 並且透過 link 與 DB 進行溝通
 
-`docker run --name web --link db:db training/webapp ping db`
+`docker run --name web --link db:db localhost:5000/training-webapp ping db`
 
 一旦有 link 的 option 定義，就可以直接透過 container name 進行存取，上述指令執行後將出現
 
@@ -35,7 +35,7 @@ PING db (172.17.0.2) 56(84) bytes of data.
 
 ```
 docker rm -f web
-docker run --name web training/webapp ping db
+docker run --name web localhost:5000/training-webapp ping db
 ```
 
 此時輸出的訊息為
