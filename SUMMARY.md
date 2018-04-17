@@ -155,10 +155,10 @@
     - [練習：使用 production image 運行專案](docker/pratice/production-image-run.md)
     - [練習：搭配 jenkins 建立 production deploy task](docker/pratice/jenkins-docker-prod-deploy-task.md)
 
-  - [Lab 405: 使用 Docker 進行前端自動化測試 (1 hour)](docker/e2e/README.md)
+  <!-- - [Lab 405: 使用 Docker 進行前端自動化測試 (1 hour)](docker/e2e/README.md)
     * [建置專案 Docker 環境](docker/e2e/build/README.md)
     * [透過 Docker 運行專案](docker/e2e/docker-debug/README.md)
-    * [透過 Docker 運行專案並執行 e2e test](docker/e2e/docker-e2e/README.md)
+    * [透過 Docker 運行專案並執行 e2e test](docker/e2e/docker-e2e/README.md) -->
 
   - [Lab 501: java jenkins 2.0 Pipeline 使用 Docker 進行專案建置 (1 hour)](docker/jnekins2/pipeline/build/README.md)
 
