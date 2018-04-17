@@ -38,10 +38,10 @@ node {
   sh "make build-docker-prod-image"
 
   stage 'publish docker production image'
-  sh "docker push agileworks/java_sample_prod"
+  sh "docker push localhost:5000/java_sample_prod"
 
   stage 'deploy production'
-  sh "make deploy-production"
+  sh "make deploy-production-local"
 
 }
 
