@@ -30,3 +30,12 @@
 ## 再次從 private registry server pull image
 
 `docker pull localhost:5000/ubuntu`
+
+
+## 列出 private registry images list
+
+`curl -X GET http://localhost:5000/v2/_catalog`
+
+也可以透過網址
+
+`http://localhost:5000/v2/_catalog`
