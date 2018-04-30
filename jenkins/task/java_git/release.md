@@ -1,48 +1,35 @@
-正式機部署
+部署
 ==========
 
-task 設置
----------
-
-基本設置與 task/[preview](preview.md) 基本上是一樣的
-
-因為是 production 環境，所以我們需要將設定改為 production 機器專用
-
-### 替換 Config
-
-使用 [config-file-provider](../plugin/config-file-provider.md)
-
-設置畫面如下：
-
-![](../images/release/configProvider.png)
-
-假設 production 機器啟動後 port 為 8000
-
-我們需要新增設定為 `application.properties`
-
-並且在建置時替換建置專案底下之 `src/main/resources/application.properties`
-
-令 production 相關設置生效。
-
-### ssh publish setup
-
-假設 preview 機器就是 production 機器
-
--	Name: 選擇在 [publish-over-ssh](../plugin/publish-over-ssh.md) 建置的 ssh server
--	Source files: target/spring-boot-sample-data-rest-0.1.0.jar
--	Remote directory: deploy/release
-
-### production release 執行指令
-
-基本指令跟 preview 很像，資料夾是不一樣的
+## release 指令使用 Makefile
 
 ```
-cd deploy/release
+deploy-default:
+	ssh jenkins@localhost mkdir -p deploy/release
+	scp target/spring-boot-sample-data-rest-0.1.0.jar jenkins@localhost:deploy/release
+	- ssh jenkins@localhost 'kill `cat deploy/release/run.pid`'
+	ssh jenkins@localhost 'java -jar deploy/release/spring-boot-sample-data-rest-0.1.0.jar > /dev/null 2>&1 & echo $$! > "deploy/release/run.pid"'
 
-kill `cat run.pid` || true
-kill `cat ../preview/run.pid` || true
-
-java -jar target/spring-boot-sample-data-rest-0.1.0.jar > /dev/null 2>&1 & echo $! > run.pid
 ```
 
-透過這些 task 的設置就把整個開發流程自動化完成。
+幾個重點如下：
+
+```
+- ssh jenkins@localhost 'kill `cat deploy/release/run.pid`'
+```
+
+上述指令開頭的 `-` 表示該指令執行失敗不影響最後結果。
+
+`/dev/null 2>&1 & echo $$! >` 其中 `$$` 若在 terminal 執行只需要一個 `$` 因為 `$` 在 makefile 中為特殊字元，透過 `$$` 來進行跳脫，若在 terminal 執行，完整指令如下
+
+`ssh jenkins@localhost 'java -jar deploy/release/spring-boot-sample-data-rest-0.1.0.jar > /dev/null 2>&1 & echo $! > "deploy/release/run.pid"'`
+
+## jenkins release bash shell
+
+實際在 jenkins 中的 bash shell 只需要執行下面指令
+
+```
+make deploy-default
+```
+
+即可完成上述多行指令的執行
