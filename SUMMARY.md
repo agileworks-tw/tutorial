@@ -6,22 +6,50 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
-<!-- - [git](./git/README.md)
+- [git](./git/README.md)
 
-  - 基礎
-    - [初始 Git 專案](git/start/README.md)
-    - [Push 專案至 GitHub](git/push/README.md)
-    - [clone 已建立之遠端專案](git/clone/README.md)
-    - [復原/取出特定版控檔案](git/checkout/README.md)
-    - [log 使用](git/log/README.md)
-    - [Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
-    - [fetch remote 專案最新變動(不合併遠端分支)](git/fetch/README.md)
-    - [什麼是 Git Flow](git/flow/README.md)
-    - [建立 Branch (分支)](git/branch/README.md)
-    - [合併 Branch (分支)](git/merge/README.md)
-    - [編修衝突](git/conflict/README.md)
-    - [reset 使用](git/reset/README.md)
-    - [tag 使用](git/tag/README.md)
+  - [什麼是 Git Flow](git/flow/README.md)
+
+  - [初始 Git 專案](git/start/README.md)
+  - [clone 已建立之遠端專案](git/clone/README.md)
+  - [log 使用](git/log/README.md)
+  - status 使用
+  - [建立 Branch (分支)](git/branch/README.md)
+
+  - workspace 到 remote repository  
+    - git rm / git mv
+    - git add
+    - git commit
+    - git commit -a
+    - [git push](git/push/README.md)
+
+  - remote repository 到 workspace
+    - [git fetch remote 專案最新變動(不合併遠端分支)](git/fetch/README.md)
+    - git reset --soft
+    - git checkout 
+
+    - git pull / git reset --hard remote/branch
+    - [git Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
+
+    - git merge / git rebase
+    - [git merge Branch (分支)](git/merge/README.md)
+
+    - git checkout HEAD / git reset --hard
+    - [git checkout HEAD](git/checkout/README.md)
+  
+  - workspace 到 stash
+    - git stash
+    - git stash apply
+
+
+  - [編修衝突](git/conflict/README.md)  
+  - cherry pick
+  - [tag 使用](git/tag/README.md)
+  
+
+  - 其他 GitHub 功能
+    - pull request
+    - issues
 
   - 搭配 SourceTree 進行版本控制
     - 查看圖形化 log
@@ -30,23 +58,9 @@
     - Reset
     - Branch
     - merge
-  - 進階
-    - Stash
-    - rebase
-    - squash
-    - revert
-    - amend
-    - cherry pick
-    - add remote
-    - fork
-    - upstream sync
-    - pull request
-  - 其他 GitHub 功能
-    - issues
-    - ZenHub
-    - Milestone
+  
 
-- JavaScript
+<!-- - JavaScript
 
   - [this](javascript/this/README.md)
   - [scope](javascript/scope/README.md)
