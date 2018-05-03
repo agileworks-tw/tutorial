@@ -8,7 +8,7 @@
 
 - [git](./git/README.md)
 
-  - [什麼是 Git Flow](git/flow/README.md)
+  
 
   - [初始 Git 專案](git/start/README.md)
   - [clone 已建立之遠端專案](git/clone/README.md)
@@ -31,7 +31,7 @@
     - git pull / git reset --hard remote/branch
     - [git Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
 
-    - git merge / git rebase
+    - git merge
     - [git merge Branch (分支)](git/merge/README.md)
 
     - git checkout HEAD / git reset --hard
@@ -41,23 +41,22 @@
     - git stash
     - git stash apply
 
-
   - [編修衝突](git/conflict/README.md)  
-  - cherry pick
   - [tag 使用](git/tag/README.md)
-  
 
   - 其他 GitHub 功能
     - pull request
     - issues
 
-  - 搭配 SourceTree 進行版本控制
+  - [什麼是 Git Flow](git/flow/README.md)
+
+  <!-- - 搭配 SourceTree 進行版本控制
     - 查看圖形化 log
     - 查看 diff
     - 編修衝突
     - Reset
     - Branch
-    - merge
+    - merge -->
   
 
 <!-- - JavaScript
