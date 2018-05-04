@@ -119,7 +119,7 @@
 
   * 設定
      * [環境變數](jenkins/setup/env.md)
-     * [ssh](jenkins/setup/ssh.md)
+     * [ssh 與 scp](jenkins/setup/ssh.md)
 
   * 進階設定
      * [security](jenkins/setup/security.md)
