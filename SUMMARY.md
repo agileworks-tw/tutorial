@@ -6,7 +6,8 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
-- [git](./git/README.md)
+- [git]()
+  * [Introduction](./git/README.md)
   * [確認環境](./git/prepare/vm.md)
   * [Git 基礎]()
     * [Git 是什麼？](./git/foundation/what.md)
