@@ -19,7 +19,7 @@ git clone ~/workspace/git-sample/hello.git john-hello
 cd ~/workspace/git-sample/john-hello
 git config user.email "john@demo.com"
 git config user.name "john"
-echo "123" << hello.txt
+echo "123" >> hello.txt
 git add .
 git commit -m 'create hello file'
 ```
