@@ -1,4 +1,6 @@
-# 練習題：將檔案放入暫存區，並模擬 git flow 流程。
+# 練習題：stash
+
+### 情境：將檔案放入暫存區，並模擬 git flow 流程。
 
 1. 透過 `git checkout develop`
 1. 透過 `git checkout -b feature/issue-1`

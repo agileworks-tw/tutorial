@@ -2,7 +2,7 @@
 
 * 合併
 * 修改內容的歷史記錄會維持原狀，但是合併後的歷史紀錄會變得更複雜。
-* 預設會以 fast-forward 的模式進行。
+* 預設會以 `fast-forward` 的模式進行。
 
 ### Fast-Forward Merge
 

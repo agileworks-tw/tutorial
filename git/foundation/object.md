@@ -8,7 +8,10 @@
 實際檔案內容
 #### tree 物件
 
-`git write-tree`
+```
+git write-tree
+git cat-file -p 6c5285378c5f9294109815b927ee46177ed7f0c6
+```
 
 ```
 100644 blob f3b9a76bc4e9ccad8e613a8f00d279ae023e81d9    .gitignore
@@ -31,6 +34,11 @@
 #### commit 物件 (送交物件)
 
 ```
+git log --oneline
+git cat-file -p eb3fba1
+```
+
+```
 tree 81745419c7ba83f077eaaf86bd2fafd3fb9b8b64
 parent f512170b13fa45e065c219fad3a89843b0002b4e
 author alincode <alincode@gmail.com> 1526312241 +0800
@@ -40,6 +48,7 @@ update
 ```
 
 * 樹狀物件的名稱，該物件顯示檔案的關聯
+* 前一個 commit 是誰
 * 新版本作者的姓名以及新版本修改的時間
 * 送交者的姓名及送交時間
 * 此修訂版本 commit 時，留下的描述
@@ -66,18 +75,25 @@ Merge branch 'dev'
 * 當 Git 要儲存一個物件時，它使用內容雜湊演算值，而不是檔案名稱。若有兩個存在不同目錄，但內容相同的檔案，兩個檔案的 SHA1 會相同。
 * SHA1 的前兩位數，會作為 `git/object/前兩位數` 的放置位置。
 
-#### git ls-files -s
-
-```
-100644 aff6388cffe192b412dfca52ddeee7a7ebd8961e 0       hello.txt
-```
 #### find .git
 
-
+* object：實際儲存檔案內容的位置
+* hook
+* logs：分支的 commit 紀錄
+* refs：分支的最後一筆 commit sha code
 ```
 .git/objects/af
 .git/objects/af/f6388cffe192b412dfca52ddeee7a7ebd8961e
 ```
+
+#### git ls-files -s
+
+列出目前工作目錄的檔案
+
+```
+100644 aff6388cffe192b412dfca52ddeee7a7ebd8961e 0       hello.txt
+```
+
 
 #### git write-tree
 

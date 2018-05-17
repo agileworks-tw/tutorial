@@ -8,12 +8,14 @@
 
 ![](assets/status2.png)
 
-* untracked：Untracked files（未被追蹤的檔案）
-* unmodified：Changes not staged for commit（被更動但尚未要提交的檔案）
-* modified: Changes to be committed（將要提交的檔案）
+* Untracked files：未被追蹤的檔案
+* Changes not staged for commit：有被更動但尚未要提交的檔案
+* Changes to be committed：將要提交的檔案
 * staged
 
 ![](assets/status.png)
+
+<!-- 這裡指的是 staged 跟 stash 是不同的歐，不要看錯了 -->
 
 ### 檔案分類
 

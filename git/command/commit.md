@@ -10,11 +10,11 @@
 
 ### 常用範例
 
-| 範例                                   | 說明                        |
-|--------------------------------------|---------------------------|
-| git commit -m "commit message"       | 新增一筆送交紀錄                  |
-| git commit -a -m "commit message"    | git add . + git commit -m |
-| git commit –amend -m "修改成新的 message" | 改變最後一次提交紀錄                |
+| 範例                                    | 說明                        |
+|---------------------------------------|---------------------------|
+| git commit -m "commit message"        | 新增一筆送交紀錄                  |
+| git commit -a -m "commit message"     | git add . + git commit -m |
+| git commit --amend -m "修改成新的 message" | 改變最後一次提交紀錄                |
 
 ### 語法結構
 

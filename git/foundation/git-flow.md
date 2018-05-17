@@ -1,5 +1,11 @@
 # Git Flow
 
+* [gitworkflows docs](https://git-scm.com/docs/gitworkflows)
+
+```
+git help workflows
+```
+
 ### the big picture
 
 ![Git Flow - the big picture](https://patrickzahnd.ch/uploads/gitflow-720x1024.png)

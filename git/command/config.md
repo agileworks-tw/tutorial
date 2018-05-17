@@ -1,6 +1,5 @@
 # 設定檔
 
-
 ### 設定檔的位置
 
 ```
@@ -12,24 +11,30 @@ Config file location
 
 * git config --global 的設定內容會被寫入 ~/.gitconfig
 * git config 的設定會被寫入 .git/config
+
 ### 編輯設定檔的方式
 
 * `vi .git/config`
 * 使用 `git config` 指令
 
+### 注意事項
+
+* --global 參數比需要緊接著 git config
+
 ### 常用範例
 
-| 範例                                                          | 說明         |
-|-------------------------------------------------------------|------------|
-| git config l                                                | 列出所有設定值    |
-| git config push.default matching                            |            |
-| git config --global user.name "demo_user"                   |            |
-| git config --global user.email "demo_user@demo.com"         |            |
-| git config --local user.name "demo_user"                    | 設定名稱       |
-| git config --local user.email "demo_user@demo.com"          | 設定信箱       |
-| git config alias.tree "log --oneline --decorate --graph"    | 設定 tree 暱稱 |
-| git config alias.l "log --all --decorate --graph --oneline" | 設定 l 暱稱    |
-| git config core.editor "vim"                                | 修改預設編輯器    |
+| 範例                                                          | 說明               |
+|-------------------------------------------------------------|------------------|
+| git config l                                                | 列出所有設定值          |
+| git config push.default matching                            | 預設發佈到相同分支名稱的遠端分支 |
+| git config --global user.name "demo_user"                   |                  |
+| git config --global user.email "demo_user@demo.com"         |                  |
+| git config --local user.name "demo_user"                    | 設定名稱             |
+| git config --local user.email "demo_user@demo.com"          | 設定信箱             |
+| git config alias.co "checkout"                              | 設定 checkout 暱稱   |
+| git config alias.tree "log --oneline --decorate --graph"    | 設定 tree 暱稱       |
+| git config alias.l "log --all --decorate --graph --oneline" | 設定 l 暱稱          |
+| git config core.editor "vim"                                | 修改預設編輯器          |
 
 ### 推薦設定的 alias
 

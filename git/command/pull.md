@@ -5,6 +5,8 @@
 * clone vs pull
 * git pull =  git fetch + git merge
 
+![](../foundation/assets/local-with-remote.jpg)
+
 ### 常用範例
 
 | 範例       | 說明               |

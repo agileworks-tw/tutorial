@@ -1,5 +1,6 @@
 # git blame 指令
 
+![](assets/git_blame.png)
 ### 使用情境
 
 * 追蹤 bug，查看這行程式誰的。

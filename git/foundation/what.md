@@ -5,8 +5,9 @@
 * 快速且有效率
 * 支援並且鼓勵分支的開發環境
 
-![](assests/local-with-remote.jpg)
+![](../foundation/assets/local-with-remote.jpg)
 
+---
 ### 語法結構
 
 ```
