@@ -8,6 +8,12 @@ SSH 在自動化的過程扮演很重要的角色，因此我們需要先將 jen
 
 ### 透過 jenkins user 建立 ssh key
 
+首先透過下面指令切換到 jenkins 這個 user
+
+`sudo su - jenkins`
+
+接著透過下面指令產生 ssh key
+
 `ssh-keygen -t rsa`
 
 default 會產生在 `~/.ssh` 將會有 `id_rsa`, `id_rsa.pub` 這兩個檔案
@@ -24,8 +30,49 @@ default 會產生在 `~/.ssh` 將會有 `id_rsa`, `id_rsa.pub` 這兩個檔案
 
 只要改變 ssh server ip 並且再把 id_rsa.pub 加入對象機器即可，其他程序皆相通
 
-設定 credentials
+如此，可以透過下面指令進行登入
+
+`ssh jenkins@localhost`
+
+若設置正確，將不需要 password 即可成功登入。
+
+除了可以登入遠端機器之外，我們可以透過 ssh 對遠端進行指令的執行，如：
+
+`ssh jenkins@localhost id`
+
+會看到類似下面的結果
+
+`uid=112(jenkins) gid=117(jenkins) groups=117(jenkins),27(sudo),999(docker)`
+
+### 使用 scp 傳輸檔案
+
+scp 為用於檔案傳輸的指令，其所使用的驗證方式跟 ssh 一樣，因此只要 ssh key 設置好之後，使用 scp 也將不需要密碼
+
+指令範例：
+
+`scp filename jenkins@localhost:~/path/to/upload `
+
+### ssh 與 scp 組合應用範例
+
+此部分將展示如何使用 ssh 建立資料夾，再將檔案透過 scp 傳輸到對應的資料夾
+
+```
+touch test-upload-file.md
+ssh jenkins@localhost mkdir ~/test-upload-folder
+scp test-upload-file.md jenkins@localhost:~/test-upload-folder
+ssh jenkins@localhost ls ~/test-upload-folder
+```
+
+
+
+
+
+
+
+Jenkins 設定 ssh credentials
 ----------------
+
+若要在 Jenkins 串接其他服務需要用到 ssh 認證的狀況，可參考下面設置
 
 ![](images/ssh/createDomain.png)
 

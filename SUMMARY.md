@@ -5,55 +5,178 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
+<!--   
 
-- [Jenkins](jenkins/README.md)
-  * [Quick Start](jenkins/workshop/README.md)
-    * [Lab 101](jenkins/workshop/lab101.md)
-    * [Lab 102](jenkins/workshop/lab102.md)
-    * [Lab 103](jenkins/workshop/lab103.md)
-    * [Lab 104](jenkins/workshop/lab104.md)
+  - [初始 Git 專案](git/start/README.md)
+  - [clone 已建立之遠端專案](git/clone/README.md)
+  - [log 使用](git/log/README.md)
+  - status 使用
+  - [建立 Branch (分支)](git/branch/README.md)
+
+  - workspace 到 remote repository  
+    - git rm / git mv
+    - git add
+    - git commit
+    - git commit -a
+    - [git push](git/push/README.md)
+
+  - remote repository 到 workspace
+    - [git fetch remote 專案最新變動(不合併遠端分支)](git/fetch/README.md)
+    - git reset --soft
+    - git checkout 
+
+    - git pull / git reset --hard remote/branch
+    - [git Pull remote 專案最新變動(合併遠端分支)](git/pull/README.md)
+
+    - git merge
+    - [git merge Branch (分支)](git/merge/README.md)
+
+    - git checkout HEAD / git reset --hard
+    - [git checkout HEAD](git/checkout/README.md)
+  
+  - workspace 到 stash
+    - git stash
+    - git stash apply
+
+  - [編修衝突](git/conflict/README.md)  
+  - [tag 使用](git/tag/README.md)
+
+  - 其他 GitHub 功能
+    - pull request
+    - issues
+
+  - [什麼是 Git Flow](git/flow/README.md)
+  - 
+  - -->
+
+  <!-- - 搭配 SourceTree 進行版本控制
+    - 查看圖形化 log
+    - 查看 diff
+    - 編修衝突
+    - Reset
+    - Branch
+    - merge -->
+  
+
+<!-- - JavaScript
+
+  - [this](javascript/this/README.md)
+  - [scope](javascript/scope/README.md)
+  - [callback](javascript/callback/README.md)
+  - [Closure](javascript/closure/README.md)
+  - [settimeout](javascript/settimeout/README.md)
+  - [performance](javascript/performance/README.md)
+  - [Memory Leaks](javascript/memory_leak/README.md)
+- TDD(測試驅動開發方式)
+  - Java
+    - [JUnit 基礎](./tdd/java/junit4/basic/README.md)
+    - [JUnit 與 Maven](./tdd/java/junit4/maven/README.md)
+    - [Assertions](./tdd/java/junit4/assertions/README.md)
+    - [Test Fixtures](./tdd/java/junit4/test-fixture/README.md)
+    - [略過 test](./tdd/java/junit4/test-fixture/README.md)
+    - [Junit 測試 API](./tdd/java/junit4/api-test/README.md)
+    - [JUnit Test Suite](./tdd/java/junit4/suite/README.md) -->
+
+- Jenkins
+
+  * [Introduction](jenkins/README.md)
   * [基本概念介紹](jenkins/basic/README.md)
-    * [豐田式生產](jenkins/basic/lean.md)
-    * [敏捷式開發](jenkins/basic/agile.md)
-    * [持續整合](jenkins/basic/continuous-integration.md)
-    * [安裝 Jenkins](jenkins/basic/install.md)
-  * 設定
-    * [環境變數](jenkins/setup/env.md)
-    * [ssh](jenkins/setup/ssh.md)
-    * [security](jenkins/setup/security.md)
-    * [timezone](jenkins/setup/timezone.md)
-    * [master/slave](jenkins/setup/master-slave.md)
-  * Jenkins CI 常用功能
-    * [build archive](jenkins/common/build-archive.md)
-    * [執行 Shell Script](jenkins/common/shell.md)
-    * [Jenkins API 使用簡介](jenkins/common/api.md)
-    * [Plugin 安裝](jenkins/common/plugin.md)
-    * [Subversion 整合](jenkins/common/subversion.md)
-    * [JUnit 報表](jenkins/common/test-report.md)
-    * [Script Console](jenkins/common/script-console.md)
-  * [常用 plugin 介紹](jenkins/plugin/README.md)
-    * [publish over ssh](jenkins/plugin/publish-over-ssh.md)
-    * [Config File Provider](jenkins/plugin/config-file-provider.md)
-    * [GitHub pull request builder](jenkins/plugin/github_pull_request_builder.md)
-    * [Bitbucket](jenkins/plugin/bitbucket.md)
-    * [Cobertura](jenkins/plugin/cobertura.md)
-    * [Jira](jenkins/plugin/jira.md)
-    * [使用指令安裝常用套件](jenkins/plugin/install_use_command.md)
-
+     * [豐田式生產](jenkins/basic/lean.md)
+     * [敏捷式開發](jenkins/basic/agile.md)
+     * [持續整合](jenkins/basic/continuous-integration.md)
+     * [安裝 Jenkins](jenkins/basic/install.md)
+       
+  * [Quick Start](jenkins/workshop/README.md)
+     * [Lab 101](jenkins/workshop/lab101.md)
+     * [Lab 102](jenkins/workshop/lab102.md)
+     * [Lab 103](jenkins/workshop/lab103.md)
+     * [Lab 104](jenkins/workshop/lab104.md)
+     
   * [CI flow 簡介](jenkins/task/flow.md)
-
-  * [Task 實作以 Java + git 為例](jenkins/task/java_git/README.md)
-     * [build](jenkins/task/java_git/build.md)
-     * [test](jenkins/task/java_git/test.md)
-     * [preview](jenkins/task/java_git/preview.md)
-     * [release](jenkins/task/java_git/release.md)
-
+  * [持續整合實作以 Java + git 為例](jenkins/task/java_git/README.md)
+    * [Lab 進行方式說明](jenkins/task/README.md)
+    * Lab 201 建置 
+      * [build-package](jenkins/task/java_git/build.md)
+      * [build-archive](jenkins/common/build-archive.md)
+    * Lab 202 測試
+      * [test](jenkins/task/java_git/test.md)
+      * [plugin-JUnit](jenkins/common/test-report.md)
+      * [plugin-Cobertura](jenkins/plugin/cobertura.md)
+    * Lab 203 部署
+      * [ssh-遠端連線設置](jenkins/setup/ssh.md)
+      * [使用 ssh 進行 deploy](jenkins/task/java_git/release.md)
+    * Lab 204 Task 連結 與 Build Tigger
+      * [定期建置 Tigger](jenkins/task/cron_test.md)
+      * [Pull SCM Tigger](jenkins/task/pull_scm/README.md)
+      * [Task 連結-測試成功則進行部署](jenkins/task/if_test_ok_then_preview.md)
+  
   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)
      * [使用 GitHub Organization 進行建置](jenkins/jenkins2/github-organization/README.md)
      * [使用 Multibranch Pipeline 進行建置](jenkins/jenkins2/multibranch-pipeline/README.md)
 
+  * 設定
+     * [環境變數](jenkins/setup/env.md)
+     * [ssh 與 scp](jenkins/setup/ssh.md)
+
+  * 進階設定
+     * [security](jenkins/setup/security.md)
+     * [timezone](jenkins/setup/timezone.md)
+     * [master/slave](jenkins/setup/master-slave.md)
+
+  <!-- * Jenkins CI 常用功能
+     
+     * [Plugin 安裝](jenkins/common/plugin.md)
+     * [執行 Shell Script](jenkins/common/shell.md)
+     * [Jenkins API 使用簡介](jenkins/common/api.md)
+     * [Subversion 整合](jenkins/common/subversion.md)   
+     * [Script Console](jenkins/common/script-console.md) -->
+  
+  * [常用 plugin 介紹](jenkins/plugin/README.md)
+     * [Config File Provider](jenkins/plugin/config-file-provider.md)
+     * [Bitbucket](jenkins/plugin/bitbucket.md)
+     * [Jira](jenkins/plugin/jira.md)
+     
+  
+  <!-- * [Task 實作以 Node.js 為例](jenkins/task/nodejs/README.md)
+     * [build](jenkins/task/nodejs/build.md)
+     * [test](jenkins/task/nodejs/test.md)
+     * [preview](jenkins/task/nodejs/preview.md)
+     * [release](jenkins/task/nodejs/release.md) -->
+
+  <!-- * [Task 實作以 Java + SVN 為例](jenkins/task/java_svn/README.md)
+     * [專案組成](jenkins/task/java_svn/project.md)
+     * [初始資料](jenkins/task/java_svn/inital.md)
+     * [build](jenkins/task/java_svn/build.md)
+     * [test](jenkins/task/java_svn/test.md)
+     * [preview](jenkins/task/java_svn/preview.md)
+     * [release](jenkins/task/java_svn/release.md) -->
+
+
+
+  <!-- * [搭配 docker 使用 Jenkins 協助測試](jenkins/withDocker/README.md)
+     * [install](jenkins/withDocker/install.md)
+     * [build](jenkins/withDocker/build.md)
+     * [test](jenkins/withDocker/test.md)
+     * [preview](jenkins/withDocker/preview.md)
+     * [release](jenkins/withDocker/release.md) -->
+
+
+  <!-- * 自動化檢查與報表設置
+    * [java doc 使用與報表產出設置](./jenkins/check/javadoc/README.md)
+    * [Checkstyle 使用與報表產出設置](./jenkins/check/checkstyle/README.md)
+    * [PMD(source code analyzer) 使用與報表產出設置](./jenkins/check/pmd/README.md)
+    * [CPD(Copy/Paste Detector) 使用與報表產出設置](./jenkins/check/dry/cpd//README.md)
+    * [Simian 使用與報表產出設置](./jenkins/check/dry/simian/README.md)
+    * [FindBugs 使用與報表產出設置](./jenkins/check/findBugs/README.md) -->
+  <!-- * 建置工具
+    * maven
+      * [Multi Module Project](./jenkins/maven/multi-app/README.md) -->
+
+  * Q & A
+     * [一般問題](jenkins/QA/general.md)
+     * [JAVA](jenkins/QA/java.md)
 
 - [Docker](docker/README.md)
   - [Meet Docker](docker/000-intro/README.md)
