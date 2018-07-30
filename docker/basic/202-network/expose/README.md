@@ -11,7 +11,7 @@ docker run -d \
 --name mysql-server \
 -e MYSQL_ADMIN_PASS="pass" \
 --expose 3306 \
-dgraziotin/mysql
+mysql
 ```
 
 執行 `docker ps`
@@ -20,16 +20,18 @@ dgraziotin/mysql
 
 ```
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-5af9391204b2        dgraziotin/mysql    "/run.sh"           4 seconds ago       Up 3 seconds        3306/tcp            mysql-server
+5af9391204b2        mysql    "/run.sh"           4 seconds ago       Up 3 seconds        3306/tcp            mysql-server
 ```
 
 ## 啟動 mysql 作為 client
+
+> 注意：須等待 mysql-server 啟動完成，估計需要 30 ~ 60 秒
 
 ```
 docker run -it --rm \
 --name mysql-client \
 --link mysql-server \
-dgraziotin/mysql \
+mysql \
 mysql -uadmin -h mysql-server -ppass
 ```
 

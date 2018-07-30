@@ -23,7 +23,7 @@ services:
 
   mysql:
     container_name: mysql
-    image: dgraziotin/mysql
+    image: mysql
     expose:
       - "3306"
     environment:

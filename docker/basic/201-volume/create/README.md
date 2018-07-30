@@ -56,14 +56,13 @@ Return low-level information on a container or image
 
 ## 執行 mysql docker
 
-
 ```
 docker run -d -p "3306:3306" \
 -e MYSQL_ADMIN_PASS="pass" \
 -e MYSQL_USER_DB="testdb" \
 -e CREATE_MYSQL_BASIC_USER_AND_DB=true \
 -v mysql-data:/var/lib/mysql/ \
-dgraziotin/mysql
+mysql
 ```
 
 接著我們可以執行 `sudo ls /var/lib/docker/volumes/mysql-data/_data`
