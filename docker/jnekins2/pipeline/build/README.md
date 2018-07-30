@@ -68,8 +68,17 @@ pipeline {
       }
     }
     stage('report') {
-      steps {
-        junit 'target/surefire-reports/*.xml'
+      parallel {
+        stage('report') {
+          steps {
+            junit 'target/surefire-reports/*.xml'
+          }
+        }
+        stage('coverage') {
+          steps {
+            cobertura(coberturaReportFile: 'target/site/cobertura/coverage.xml')
+          }
+        }
       }
     }
     stage('package') {
@@ -77,7 +86,6 @@ pipeline {
         sh 'docker-compose run package'
       }
     }
-   
     stage('archive') {
       steps {
         archiveArtifacts 'target/spring-boot-sample-data-rest-0.1.0.jar'
@@ -90,16 +98,11 @@ make deploy-production-ssh
 '''
       }
     }
-    stage('clean') {
-      steps {
-        sh 'docker-compose run clean'
-      }
-    }     
   }
   post {
     always {
+      sh 'docker-compose run clean'
       echo 'I will always say Hello again!'
-
     }
 
     success {
@@ -115,3 +118,5 @@ make deploy-production-ssh
   }
 }
 ```
+
+![](assets/2018-07-30-14-54-03.png)
