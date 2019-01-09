@@ -1,10 +1,79 @@
 # Summary
 
 - 上課須知
+
   - [相關服務事前註冊](prepare/service-signup.md)
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
+- [git]()
+  * [介紹](./git/README.md)
+  * [確認環境](./git/prepare/vm.md)
+  * [Git 基礎]()
+    * [Git 是什麼？](./git/foundation/what.md)
+    * [為什麼我們需要 Git](./git/foundation/why.md)
+    * [初始化專案 init](./git/command/init.md)
+    * [設定檔 config](./git/command/config.md)
+    * [練習題：init](./git/practice/init.md)
+    * [觀念講解：索引](./git/foundation/index.md)
+    * [觀念講解：認識 Git 物件](./git/foundation/object.md)
+  * [Git 之 CRUD]()
+    * [工作區、暫存區、儲存庫](./git/foundation/space.md)
+    * [狀態 status](./git/command/status.md)
+    * [新增 add](./git/command/add.md)
+    * [送交 commit](./git/command/commit.md)
+    * [練習題：commit](./git/practice/commit.md)
+    * [檢視 log / show](./git/command/log.md)
+    * [比對差異 diff](./git/command/diff.md)
+    * [刪除 rm](./git/command/rm.md)
+    * [練習題：rm](./git/practice/rm.md)
+    * [重新命名 mv](./git/command/mv.md)
+  * [觀念講解： Git Flow]()
+    * [整體概念](./git/git-flow/README.md)
+    * [master 分支](./git/git-flow/master.md)
+    * [feature 分支](./git/git-flow/feature.md)
+    * [hotfix 分支](./git/git-flow/hotfix.md)
+  * [分支 branch]()
+    * [分支 branch CRUD](./git/command/branch.md)
+    * [切換 checkout](./git/command/checkout.md)
+    * [練習題：checkout](./git/practice/checkout.md)
+    * [練習題：branch](./git/practice/branch.md)
+    * [合併 merge](./git/command/merge.md)
+    * [觀念解說：解決衝突](./git/foundation/conflict.md)
+    * [練習題：conflict 解決衝突](./git/practice/conflict.md)
+    * [暫存 stash](./git/command/stash.md)
+    * [練習題：stash](./git/practice/stash.md)
+  * [修改送交]()
+    * [還原 reset](./git/command/reset.md)
+    * [練習題：reset](./git/practice/reset.md)
+    * [資料還原 revert](./git/command/revert.md)
+    * [重新指定位置 rebase](./git/command/rebase.md)
+    * [練習題：rebase](./git/practice/rebase.md)
+    * [觀念講解：reset vs revert](./git/foundation/reset-vs-revert.md)
+  * [遠端協作]()
+    * [容器](./git/foundation/container.md)
+    * [remote](./git/command/remote.md)
+    * [複製 clone](./git/command/clone.md)
+    * [拉 pull](./git/command/pull.md)
+    * [更新 fetch](./git/command/fetch.md)
+    * [練習題：fetch](./git/practice/fetch.md)
+    * [部署 push](./git/command/push.md)
+    * [練習題：push](./git/practice/push.md)
+    * [標籤 tag](./git/command/tag.md)
+    * [練習題：發佈 tag](./git/practice/tag.md)
+  * [Github](./git/github/README.md)
+    * [issue](./git/github/issue.md)
+    * [clone](./git/github/clone.md)
+    * [fork](./git/github/fork.md)
+    * [pull request](./git/github/pr.md)
+    * [練習題：操作 Github](./git/practice/github.md)
+  * [補充]()
+    * [reflog](./git/command/reflog.md)
+    * [blame](./git/command/blame.md)
+    * [grep](./git/command/grep.md)
+    * [tig](./git/mise/tig.md)
+    * [實用小技巧](./git/tips.md)
+    * [更多資源](./git/resource.md)
 
 
 
@@ -182,7 +251,9 @@
      * [JAVA](jenkins/QA/java.md)
 
 - [Docker](docker/README.md)
+
   - [Meet Docker](docker/000-intro/README.md)
+
     - [What is Docker](docker/000-intro/what/README.md)
     - [Docker vs VMs](docker/000-intro/compare/README.md)
     - [Why Docker](docker/000-intro/why/README.md)
@@ -243,7 +314,17 @@
     - [使用 docker-machine 連結已存在之遠端 docker engine](docker/machine/exist-remote-docker/README.md)
     - [upgrade](docker/machine/upgrade/README.md)
     - [rm](docker/machine/rm/README.md)
+
+  <!-- - [Lab 204: 善用 docker hub 上的 image (0.5 hour)](docker/hub/README.md)
+
+    - [ubuntu](docker/hub/ubuntu/README.md)
+    - [alpine](docker/hub/alpine/README.md)
+    - [mysql](docker/hub/mysql/README.md)
+    - [maven](docker/hub/maven/README.md)
+    - [Node.js](docker/hub/nodejs/README.md) -->
+
   - Lab 301: 使用 docker 建置 java 開發環境 (1 hour)
+
     - [運行環境安裝](docker/project/java/env/README.md)
     - [進入 Container 進行建置](docker/project/java/env-docker-build/README.md)
     - [透過 Dockerfile 進行建置](docker/project/java/env-dockerfile/README.md)
@@ -253,6 +334,7 @@
     - [進入 Container 進行建置](docker/application/jenkins/build-docker/README.md)
     - [透過 Dockerfile 進行建置](docker/application/jenkins/build-dockerfile/README.md)
 
+  <!-- - Lab 303: docker 之間溝通透過 depends_on(1 hour) -->
   - Lab 401: java 範例專案使用 docker 進行建置 (1 hour)
 
     - [範例專案](docker/project/java/repository/README.md)
@@ -295,7 +377,12 @@
     * [Production Image 建置](docker/jnekins2/pipeline/e2e/build-prod/README.md)
     * [完整 docker-compose](docker/jnekins2/pipeline/e2e/docker-compose/README.md)
 
-
+  <!-- - Lab 601: docker swarm
+    -	[local network cluster](docker/swarm/local/README.md)
+    - [overlay network cluster](docker/swarm/overlay/README.md) -->
+<!-- - Slack
+  - [github 整合](./slack/github/README.md)
+  - [jenkins 整合](./slack/jenkins/README.md) -->
 - Appendix
 
   - [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)
