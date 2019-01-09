@@ -108,9 +108,9 @@
     * Lab 203 部署
       * [ssh-遠端連線設置](jenkins/setup/ssh.md)
       * [使用 ssh 進行 deploy](jenkins/task/java_git/release.md)
-    * Lab 204 Task 連結 與 Build Tigger
-      * [定期建置 Tigger](jenkins/task/cron_test.md)
-      * [Pull SCM Tigger](jenkins/task/pull_scm/README.md)
+    * Lab 204 Task 連結 與 Build Trigger
+      * [定期建置 Trigger](jenkins/task/cron_test.md)
+      * [Pull SCM Trigger](jenkins/task/pull_scm/README.md)
       * [Task 連結-測試成功則進行部署](jenkins/task/if_test_ok_then_preview.md)
   
   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
