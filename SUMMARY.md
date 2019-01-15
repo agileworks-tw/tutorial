@@ -6,7 +6,7 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
-<!-- - [git]()
+- [git]()
   * [介紹](./git/README.md)
   * [確認環境](./git/prepare/vm.md)
   * [Git 基礎]()
@@ -73,7 +73,7 @@
     * [grep](./git/command/grep.md)
     * [tig](./git/mise/tig.md)
     * [實用小技巧](./git/tips.md)
-    * [更多資源](./git/resource.md) -->
+    * [更多資源](./git/resource.md)
 
 
 
