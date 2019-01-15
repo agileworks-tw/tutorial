@@ -6,7 +6,7 @@
   - [事前安裝：自備筆電](prepare/laptop.md)
   - [事前安裝：電腦教室](prepare/pc.md)
 
-- [git]()
+<!-- - [git]()
   * [介紹](./git/README.md)
   * [確認環境](./git/prepare/vm.md)
   * [Git 基礎]()
@@ -73,7 +73,7 @@
     * [grep](./git/command/grep.md)
     * [tig](./git/mise/tig.md)
     * [實用小技巧](./git/tips.md)
-    * [更多資源](./git/resource.md)
+    * [更多資源](./git/resource.md) -->
 
 
 
@@ -187,9 +187,9 @@
      * [使用 GitHub Organization 進行建置](jenkins/jenkins2/github-organization/README.md)
      * [使用 Multibranch Pipeline 進行建置](jenkins/jenkins2/multibranch-pipeline/README.md)
 
-  * 設定
+  <!-- * 設定
      * [環境變數](jenkins/setup/env.md)
-     * [ssh 與 scp](jenkins/setup/ssh.md)
+     * [ssh 與 scp](jenkins/setup/ssh.md) -->
 
   * 進階設定
      * [security](jenkins/setup/security.md)
@@ -204,10 +204,10 @@
      * [Subversion 整合](jenkins/common/subversion.md)   
      * [Script Console](jenkins/common/script-console.md) -->
   
-  * [常用 plugin 介紹](jenkins/plugin/README.md)
+  <!-- * [常用 plugin 介紹](jenkins/plugin/README.md)
      * [Config File Provider](jenkins/plugin/config-file-provider.md)
      * [Bitbucket](jenkins/plugin/bitbucket.md)
-     * [Jira](jenkins/plugin/jira.md)
+     * [Jira](jenkins/plugin/jira.md) -->
      
   
   <!-- * [Task 實作以 Node.js 為例](jenkins/task/nodejs/README.md)
@@ -304,7 +304,7 @@
     - [port](docker/basic/202-network/port/README.md)
     - [透過 docker-compose 使用 network](docker/basic/202-network/docker-compose/README.md)
 
-  - [Lab 203: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
+  <!-- - [Lab 203: Docker Machine 的使用 (1 hour)](docker/machine/README.md)
     - [install](docker/machine/install/README.md)
     - [drive](docker/machine/drive/README.md)
     - [create](docker/machine/create/README.md)
@@ -312,7 +312,7 @@
     - [ls](docker/machine/ls/README.md)
     - [使用 docker-machine 連結已存在之遠端 docker engine](docker/machine/exist-remote-docker/README.md)
     - [upgrade](docker/machine/upgrade/README.md)
-    - [rm](docker/machine/rm/README.md)
+    - [rm](docker/machine/rm/README.md) -->
 
   <!-- - [Lab 204: 善用 docker hub 上的 image (0.5 hour)](docker/hub/README.md)
 
@@ -328,10 +328,10 @@
     - [進入 Container 進行建置](docker/project/java/env-docker-build/README.md)
     - [透過 Dockerfile 進行建置](docker/project/java/env-dockerfile/README.md)
 
-  - Lab 302: 使用 docker 建置 Jenkins 服務 (1 hour)
+  <!-- - Lab 302: 使用 docker 建置 Jenkins 服務 (1 hour)
 
     - [進入 Container 進行建置](docker/application/jenkins/build-docker/README.md)
-    - [透過 Dockerfile 進行建置](docker/application/jenkins/build-dockerfile/README.md)
+    - [透過 Dockerfile 進行建置](docker/application/jenkins/build-dockerfile/README.md) -->
 
   <!-- - Lab 303: docker 之間溝通透過 depends_on(1 hour) -->
   - Lab 401: java 範例專案使用 docker 進行建置 (1 hour)
