@@ -171,11 +171,10 @@
       * [build-package](jenkins/task/java_git/build.md)
       * [build-archive](jenkins/common/build-archive.md)
     * Lab 202 測試
-      * [test](jenkins/task/java_git/test.md)
-      * [plugin-JUnit](jenkins/common/test-report.md)
-      * [plugin-Cobertura](jenkins/plugin/cobertura.md)
+      * [單元測試 JUnit ](jenkins/common/test-report.md)
+      * [測試覆蓋率 Cobertura](jenkins/plugin/cobertura.md)
     * Lab 203 部署
-      * [ssh-遠端連線設置](jenkins/setup/ssh.md)
+      * [ssh 遠端連線設置](jenkins/setup/ssh.md)
       * [使用 ssh 進行 deploy](jenkins/task/java_git/release.md)
     * Lab 204 Task 連結 與 Build Trigger
       * [定期建置 Trigger](jenkins/task/cron_test.md)

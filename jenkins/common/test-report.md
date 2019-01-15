@@ -1,6 +1,13 @@
 JUnit report
 ============
 
+## 建置指令
+
+```
+#!/bin/bash
+mvn clean test
+```
+
 設置 task output report
 -----------------------
 
@@ -11,7 +18,10 @@ JUnit report
 
 ![](images/test-report/task-setting.png)
 
-如上圖所示，將 Test report XMLs 設置為 `target/surefire-reports/*.xml`
+如上圖所示，將 Test report XMLs 設置為 
+
+`target/surefire-reports/*.xml`
+
 
 檢視 test report
 ----------------
