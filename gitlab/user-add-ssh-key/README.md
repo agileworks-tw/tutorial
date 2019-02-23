@@ -105,7 +105,7 @@ G1bJkZcqAvplJ3CJ9npkTj8CSb9AosSqY8Vo8H26pxRxeSFzQVHRqVVJv2KTHLIA
 
 ![](assets/2019-02-18-17-24-53.png)
 
-其中 Username 需要與上一步驟之 gitlab username 相同方可驗鄭成功，點選 OK 完成。
+其中 Username 需要與上一步驟之 gitlab username 相同方可驗證成功，點選 OK 完成。
 
 在 Jenkins 新增 Jobs 點選 git，設定如下
 
