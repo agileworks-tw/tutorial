@@ -1,9 +1,7 @@
 # Summary
 
 - 上課須知
-   - [相關服務事前註冊](prepare/service-signup.md)
    - [事前安裝：自備筆電](prepare/laptop.md)
-   - [事前安裝：電腦教室](prepare/pc.md)
    - [VirtualBox 映像檔匯入](prepare/after-import.md)  
 - gitlab
    * [使用者驗證設置](gitlab/user-add-ssh-key/README.md)
