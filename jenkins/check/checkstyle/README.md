@@ -2,6 +2,10 @@
 
 checkStyle 主要用於檢查 coding style 是否正確，透過 checkStyle 可以讓程式為我們的專案進行 Style 的把關
 
+搭配 Warnings Next Generation plugin 使用，套件網址：
+
+https://plugins.jenkins.io/warnings-ng
+
 ## maven POM.xml 設定
 
 透過 maven POM.xml 定義，可以讓我們使用 mvn 指令來進行 checkStyle
@@ -34,21 +38,21 @@ checkStyle 主要用於檢查 coding style 是否正確，透過 checkStyle 可�
 
 ## 利用 Jenkins 產出 Report
 
-![](assets/README-af081.png)
+![](assets/2019-02-22-14-41-41.png)
 
-若 `Checkstyle results` 沒有設置的情況下，預設為 `**/checkstyle-result.xml`
+若 `Checkstyle results` 沒有設置的情況下，預設為 `**/checkstyle-result.xml`，設置畫面如下：
 
-故這邊不做設置，剛好符合 report 產出位置。
+![](assets/2019-02-22-14-45-26.png)
 
-產出相關報表如下：
+產出報表畫面：
 
-![](./trend.png)
+![](assets/2019-02-22-14-46-23.png)
 
-![](./result1.png)
+![](assets/2019-02-22-14-46-41.png)
 
-![](./result2.png)
+![](assets/2019-02-22-14-46-55.png)
 
-![](./result3.png)
+![](assets/2019-02-22-14-47-17.png)
 
 ## 參考資料
 

@@ -2,6 +2,10 @@
 
 檢查源碼內重覆的部分
 
+搭配 Warnings Next Generation plugin 使用，套件網址：
+
+https://plugins.jenkins.io/warnings-ng
+
 ## maven POM.xml 設定
 ```
 <plugin>
@@ -37,19 +41,23 @@
 
 ## 使用 Jenkins 進行 check 並產生報表
 
-![](assets/README-e6c33.png)
+首先設置執行檢查指令：
+
+`mvn pmd:cpd-check`
+
+![](assets/2019-02-22-15-13-43.png)
 
 指定到 CPD 產出原始 XML 報告檔的檔案集，例如 **/cpd.xml。檔案集起算目錄就是工作區根目錄。如果沒有設定，預設會是 **/cpd.xml
 
+參考報表輸出設置畫面如下：
+
+![](assets/2019-02-22-15-15-40.png)
+
 相關報表畫面如下：
 
-![](./trend.png)
+![](assets/2019-02-22-15-16-03.png)
 
-![](./result1.png)
-
-![](./result2.png)
-
-![](./result3.png)
+![](assets/2019-02-22-15-16-16.png)
 
 
 ## 參考資料
