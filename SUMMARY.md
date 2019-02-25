@@ -21,6 +21,9 @@
       * [preview](jenkins/task/java_git/preview.md)
       * [release](jenkins/task/java_git/release.md)
       * [版本版號資訊寫入專案設置](jenkins/task/java_git/version-info/README.md)
+   * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
+      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
+      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)      
    * 自動化檢查與報表設置
       * [Jenkins Warnings Next Generation Plugin](./jenkins/check/warnings-ng/README.md)
       * [java doc 使用與報表產出設置](./jenkins/check/javadoc/README.md)

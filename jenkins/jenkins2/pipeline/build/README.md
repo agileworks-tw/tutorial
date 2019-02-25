@@ -6,7 +6,7 @@
 node {
 
   stage 'checkout project'
-  git url: 'https://github.com/agileworks-tw/spring-boot-sample.git'
+  git url: 'https://gitlab.trunksys.com/agileworks/spring-boot-sample.git'
 
   stage 'check env'
 
