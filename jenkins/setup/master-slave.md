@@ -25,20 +25,20 @@ jenkins slave 設置
 slave 無網路情形
 ----------------
 
-可以使用 `在 Master 上執行指令啟動 Slave`
+首先需要先開啟 TCP port for JNLP agents
 
-參考 jenkins 內的說明
+![](assets/2019-02-25-13-10-07.png)
 
-> 啟動 Slave 代理程式的指令，可以控制 Slave 電腦並與 Master 溝通。 Jenkins 假設執行的程式會在正式的 Slave 機器上啟動 slave.jar。
->
-> 可以由 http://${jenkinsServerHost}/jnlpJars/slave.jar 下載 slave.jar。
->
-> 簡單一點就像 "ssh 主機名稱 java -jar ~/bin/slave.jar"。 但是，一般會建議您在 Slave 上面寫一個小 Shell Script，控制 Java 及 slave.jar 的位置， 也能設定 PATH 這類節點間不盡相同的環境變數。就像:
->
-> #!/bin/sh exec java -jar ~/bin/slave.jar
->
-> 您可以使用任何指令執行 Slave 機器上的程式，例如 RSH。 只要最後程式的 stdin 及 stdout 被連到 "java -jar ~/bin/slave.jar" 就好。
->
-> 大型部署環境下，可以考慮從掛載 NFS 的共通位置中載入 slave.jar， 就不用每次升級 Jenkins 時還要同步更新每部機器上的這個檔案。
->
-> 設定成 "ssh -v 主機名稱" 可以幫助您處理連線問題。
+點選 node 節點可以看到引導，如下圖
+
+![](assets/2019-02-25-13-10-58.png)
+
+點選畫面中 agent.jar 下載連結，每個 jenkins 會因為安裝位置會有所不同
+
+在欲作為 slave 的機器執行下面指令，即可完成 slave 啟動
+
+```
+java -jar agent.jar -jnlpUrl http://localhost:9088/computer/macbook/slave-agent.jnlp -secret b8bf8308e5f713c957610a6049df88ed1975622efe1ea5d95a27ac4b5c7a75aa -workDir "/Users/spooky/jenkins_home"
+
+```
+
