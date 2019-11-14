@@ -161,8 +161,7 @@
   * [Quick Start](jenkins/workshop/README.md)
      * [Lab 101](jenkins/workshop/lab101.md)
      * [Lab 102](jenkins/workshop/lab102.md)
-     * [Lab 103](jenkins/workshop/lab103.md)
-     * [Lab 104](jenkins/workshop/lab104.md)
+     * [Lab 103](jenkins/workshop/lab104.md)
      
   * [CI flow 簡介](jenkins/task/flow.md)
   * [持續整合實作以 Java + git 為例](jenkins/task/java_git/README.md)
