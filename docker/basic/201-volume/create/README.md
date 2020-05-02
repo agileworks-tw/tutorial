@@ -57,10 +57,8 @@ Return low-level information on a container or image
 ## 執行 mysql docker
 
 ```
-docker run -d -p "3306:3306" \
--e MYSQL_ADMIN_PASS="pass" \
--e MYSQL_USER_DB="testdb" \
--e CREATE_MYSQL_BASIC_USER_AND_DB=true \
+docker run -d \
+-e MYSQL_ROOT_PASSWORD="pass" \
 -v mysql-data:/var/lib/mysql/ \
 mysql
 ```

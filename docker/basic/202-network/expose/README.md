@@ -9,7 +9,7 @@
 ```
 docker run -d \
 --name mysql-server \
--e MYSQL_ADMIN_PASS="pass" \
+-e MYSQL_ROOT_PASSWORD="pass" \
 --expose 3306 \
 mysql
 ```

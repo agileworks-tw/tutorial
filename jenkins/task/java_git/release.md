@@ -11,6 +11,14 @@ deploy-default:
 	ssh jenkins@localhost 'java -jar deploy/release/spring-boot-sample-data-rest-0.1.0.jar > /dev/null 2>&1 & echo $$! > "deploy/release/run.pid"'
 
 ```
+上述關於 /dev/null 2>&1 的解釋：
+
+1. 系統將標準輸入/輸出分成三個，分別是 stdin (fd 是 0)，stdout (fd 是 1)，及 stderr (fd 是 2)，在這裡 2 代表標準錯誤輸出 stderr。
+2. &: 設定使用 fd 代號, 如果 `> dev/null 2>&1` 沒有加上 `&`，會視後面的 `1` 為檔案名稱, 而不是 fd。
+
+“> /dev/null 2>&1” 的完整解釋：將左邊程式的所有標準輸出 stdout，及標準錯誤輸出 stderr 導向到 /dev/null，即左邊的程式只會執行，而不會輸出任何程式執行的結果。
+
+來源：<https://www.opencli.com/linux/dev-null-2-and-1-meanning>
 
 幾個重點如下：
 
