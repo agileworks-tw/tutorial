@@ -22,7 +22,7 @@
 
 ## 安裝 VirtualBox
 
-依照您的作業系統類型，安裝 5.x 以上最新版本的 VirtualBox 軟體，建議同時安裝「VirtualBox Extension Pack」以支援虛擬機器的進階功能。
+依照您的作業系統類型，安裝 6.x 以上最新版本的 VirtualBox 軟體，建議同時安裝「VirtualBox Extension Pack」以支援虛擬機器的進階功能。
 
 VirtualBox 下載頁面 
 
@@ -50,10 +50,3 @@ VirtualBox 下載頁面
 
 進行註冊。
 
-## 註冊 Docker Hub 帳號
-
-如果你還沒有 Docker Hub 帳號，請到 Docker Hub 網站:
-
-<https://hub.docker.com/account/signup/> 
-
-進行註冊。
