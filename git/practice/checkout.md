@@ -11,7 +11,7 @@
 ### step1
 
 echo "Hello World" >> README.md && git add . && git commit -m 'init'
-echo "alincode" >> README.md
+echo "user" >> README.md
 
 
 ### step2

@@ -39,8 +39,8 @@ $ git cat-file -p d93a61550216134ea18ff5db907f066fd8beb866
 
 tree cbfd7a8e6c7bd0eec9f524b42bdce9ff31bac2e3
 parent 59da3738f9ccf00e1246098a65259b713e848926
-author alincode <alincode@gmail.com> 1526267514 +0000
-committer alincode <alincode@gmail.com> 1526267514 +0000
+author user <user@gmail.com> 1526267514 +0000
+committer user <user@gmail.com> 1526267514 +0000
 
 add hello2 file
 ```

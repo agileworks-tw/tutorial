@@ -17,7 +17,7 @@
 | git log -2                                                         | 查看最後兩筆 commit 歷史紀錄  |
 | git log master                                                     |                     |
 | git log --oneline                                                  |                     |
-| git log --author="alincode"                                        | 只查看特定人的送交紀錄         |
+| git log --author="user"                                        | 只查看特定人的送交紀錄         |
 | git log -p hello.js                                                |                     |
 | git log --follow README.md                                         | 列出包含該檔案變動的提交(包含改名前) |
 | git log --oneline --abbrev-commit --all --graph --decorate --color |                     |

@@ -6,8 +6,8 @@
 
 | 範例                                                 | 說明              |
 |----------------------------------------------------|-----------------|
-| git clone https://github.com/alincode/git-workshop | 複製遠端容器          |
-| git clone ~/remote-repo alincode-repo              | 複製遠端容器，並指定資料夾名稱 |
+| git clone https://github.com/example/git-workshop | 複製遠端容器          |
+| git clone ~/remote-repo example-repo              | 複製遠端容器，並指定資料夾名稱 |
 | git clone ~/remote-repo                            | 複製遠端容器          |
 
 

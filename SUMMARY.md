@@ -1,8 +1,5 @@
 # Summary
 
-  - 上課須知
-    - [事前安裝：自備筆電](prepare/laptop.md)
-    - [事前安裝：VirtualBox 映像檔匯入](prepare/vm-import.md)
   * [Git]()
     * [Git 是什麼？](./git/foundation/what.md)
     * [為什麼我們需要 Git](./git/foundation/why.md)
@@ -68,51 +65,3 @@
     * [tig](./git/mise/tig.md)
     * [實用小技巧](./git/tips.md)
     * [更多資源](./git/resource.md)
-  * [Jenkins]()
-    * [Introduction](jenkins/README.md)
-    * [基本概念介紹](jenkins/basic/README.md)
-      * [豐田式生產](jenkins/basic/lean.md)
-      * [敏捷式開發](jenkins/basic/agile.md)
-      * [持續整合](jenkins/basic/continuous-integration.md)
-      * [安裝 Jenkins](jenkins/basic/install.md)
-        
-    * [Quick Start](jenkins/workshop/README.md)
-      * [Lab 101](jenkins/workshop/lab101.md)
-      * [Lab 102](jenkins/workshop/lab102.md)
-      * [Lab 103](jenkins/workshop/lab104.md)
-      
-    * [CI flow 簡介](jenkins/task/flow.md)
-    * [持續整合實作以 Java + git 為例](jenkins/task/java_git/README.md)
-      * [Lab 進行方式說明](jenkins/task/README.md)
-      * Lab 201 建置 
-        * [build-package](jenkins/task/java_git/build.md)
-        * [build-archive](jenkins/common/build-archive.md)
-      * Lab 202 測試
-        * [單元測試 JUnit ](jenkins/common/test-report.md)
-        * [測試覆蓋率 Cobertura](jenkins/plugin/cobertura.md)
-      * Lab 203 部署
-        * [ssh 遠端連線設置](jenkins/setup/ssh.md)
-        * [使用 ssh 進行 deploy](jenkins/task/java_git/release.md)
-      * Lab 204 Task 連結 與 Build Trigger
-        * [定期建置 Trigger](jenkins/task/cron_test.md)
-        * [Pull SCM Trigger](jenkins/task/pull_scm/README.md)
-        * [Task 連結-測試成功則進行部署](jenkins/task/if_test_ok_then_preview.md)
-    
-    * [搭配 Jenkins 2.0 之 Pipeline 進行建置](jenkins/jenkins2/README.md)
-      * [基礎練習](jenkins/jenkins2/pipeline/tutorial/README.md)
-      * [使用 Pipeline 進行建置](jenkins/jenkins2/pipeline/build/README.md)
-      * [使用 GitHub Organization 進行建置](jenkins/jenkins2/github-organization/README.md)
-      * [使用 Multibranch Pipeline 進行建置](jenkins/jenkins2/multibranch-pipeline/README.md)
-
-    <!-- * 設定
-      * [環境變數](jenkins/setup/env.md)
-      * [ssh 與 scp](jenkins/setup/ssh.md) -->
-
-    * 進階設定
-      * [security](jenkins/setup/security.md)
-      * [timezone](jenkins/setup/timezone.md)
-      * [master/slave](jenkins/setup/master-slave.md)
-
-
-  - Appendix
-    - [vt-x amd-v 異常造成 VM 無法開啟](docker/troubleshooting/vt_x_amd_v_error/README.md)

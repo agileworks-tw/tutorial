@@ -41,8 +41,8 @@ git cat-file -p eb3fba1
 ```
 tree 81745419c7ba83f077eaaf86bd2fafd3fb9b8b64
 parent f512170b13fa45e065c219fad3a89843b0002b4e
-author alincode <alincode@gmail.com> 1526312241 +0800
-committer alincode <alincode@gmail.com> 1526312241 +0800
+author user <user@gmail.com> 1526312241 +0800
+committer user <user@gmail.com> 1526312241 +0800
 
 update
 ```

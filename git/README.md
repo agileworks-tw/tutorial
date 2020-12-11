@@ -11,4 +11,4 @@
 
 ## License
 
-MIT © [alincode](https://github.com/alincode)
+MIT © [trunk-studio](https://github.com/trunk-studio)

@@ -16,7 +16,7 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
            [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
            <command> [<args>]
-user@ubuntu-xenial:~/workspace/git-sample/alincode-hello$ git
+user@ubuntu-xenial:~/workspace/git-sample/user-hello$ git
 usage: git [--version] [--help] [-C <path>] [-c name=value]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
